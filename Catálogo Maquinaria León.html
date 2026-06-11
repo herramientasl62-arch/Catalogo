@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Catálogo Maquinaria León</title>
+<link rel="icon" type="image/png" href="favicon_maquinaria_leon.png">
+<style>
+:root {
+    --ml-blue:#153B66;
+    --viktec-yellow:#FFD233;
+    --viktec-orange:#F28C28;
+    --epont-red:#C62828;
+    --epont-dark:#3A3A3A;
+    --bg:#F5F7FA;
+    --text:#222;
+}
+*{box-sizing:border-box;}
+body {
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+header {
+    position:relative;
+    overflow:hidden;
+    background:
+      linear-gradient(90deg, rgba(15,39,68,.96), rgba(21,59,102,.90)),
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27900%27%20height%3D%27260%27%20viewBox%3D%270%200%20900%20260%27%3E%0A%20%20%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.22%29%27%20stroke-width%3D%272%27%3E%0A%20%20%20%20%3Cpolygon%20points%3D%2770%2C45%2095%2C32%20120%2C45%20120%2C75%2095%2C88%2070%2C75%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2795%27%20cy%3D%2760%27%20r%3D%2714%27/%3E%0A%20%20%20%20%3Cpolygon%20points%3D%27250%2C105%20280%2C88%20310%2C105%20310%2C140%20280%2C158%20250%2C140%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27280%27%20cy%3D%27123%27%20r%3D%2718%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M440%2070%20h120%20l20%2020%20v30%20h-160%20v-30z%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M455%2080%20v60%20M475%2080%20v60%20M495%2080%20v60%20M515%2080%20v60%20M535%2080%20v60%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27680%27%20cy%3D%2770%27%20r%3D%2734%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27680%27%20cy%3D%2770%27%20r%3D%2716%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M700%2094%20l90%2090%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M765%20165%20l42%2042%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M90%20190%20h130%20m-20-18%20l38%2018-38%2018%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M580%20190%20q40-80%2095-25%20q-65%2040-95%2025z%27/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.10%29%27%20stroke-width%3D%271%27%3E%0A%20%20%20%20%3Cpolygon%20points%3D%27800%2C35%20825%2C20%20850%2C35%20850%2C65%20825%2C80%20800%2C65%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27825%27%20cy%3D%2750%27%20r%3D%2713%27/%3E%0A%20%20%20%20%3Cpolygon%20points%3D%27365%2C30%20385%2C18%20405%2C30%20405%2C54%20385%2C66%20365%2C54%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27385%27%20cy%3D%2742%27%20r%3D%2710%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M25%2090%20h90%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M740%2025%20h120%20l20%2020%20v25%20h-160%20v-25z%27/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:48px 7vw 44px;
+    border-top:10px solid var(--viktec-yellow);
+    box-shadow:0 6px 22px rgba(0,0,0,.18);
+}
+header h1 {
+    margin:0;
+    font-size:52px;
+    letter-spacing:1px;
+    line-height:1.02;
+    text-shadow:0 3px 12px rgba(0,0,0,.35);
+}
+header p {
+    margin:8px 0 0;
+    opacity:.92;
+}
+.toolbar {
+    padding:18px 7vw;
+    background:white;
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+.toolbar input {
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #d9dee8;
+    border-radius:12px;
+    font-size:16px;
+}
+.brand-tabs {
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:14px;
+}
+.brand-tabs button {
+    border:0;
+    border-radius:999px;
+    padding:10px 16px;
+    font-weight:bold;
+    cursor:pointer;
+    background:#e9edf3;
+    color:#333;
+}
+.brand-tabs button.active {
+    background:var(--ml-blue);
+    color:white;
+}
+.brand-tabs button[data-brand="viktec"].active {
+    background:var(--ml-blue);
+    color:white;
+    box-shadow:inset 0 -4px 0 var(--viktec-yellow);
+}
+.brand-tabs button[data-brand="epont"].active {
+    background:var(--epont-red);
+    color:white;
+}
+.notice{
+    margin-top:12px;
+    padding:12px 15px;
+    background:#FFF8D6;
+    border-left:5px solid var(--viktec-yellow);
+    border-radius:10px;
+    color:#555;
+    font-size:13px;
+    line-height:1.5;
+}
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(245px,1fr));
+    gap:20px;
+    padding:28px 7vw 60px;
+}
+.card {
+    background:white;
+    border-radius:18px;
+    padding:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    min-height:430px;
+}
+.card img {
+    height:185px;
+    width:100%;
+    object-fit:contain;
+    background:white;
+    border-radius:14px;
+    margin-bottom:12px;
+    padding:10px;
+    box-sizing:border-box;
+}
+.meta {
+    display:flex;
+    gap:8px;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+}
+.meta b {
+    padding:5px 9px;
+    border-radius:999px;
+    font-size:12px;
+}
+.meta em {
+    color:white;
+    font-style:normal;
+    padding:5px 9px;
+    border-radius:999px;
+    font-size:11px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:135px;
+}
+.brand-label {
+    color:white;
+    font-size:10px;
+    font-weight:bold;
+    padding:5px 8px;
+    border-radius:999px;
+}
+.brand-label.viktec {
+    background:var(--ml-blue);
+}
+.brand-label.epont {
+    background:var(--epont-red);
+}
+.brand-viktec .meta b {
+    background:var(--viktec-yellow);
+    color:#222;
+}
+.brand-viktec .meta em {
+    background:var(--ml-blue);
+}
+.brand-viktec h3 {
+    color:var(--ml-blue);
+}
+.brand-viktec .price {
+    background:var(--viktec-orange);
+}
+.brand-epont .meta b {
+    background:var(--epont-red);
+    color:white;
+}
+.brand-epont .meta em {
+    background:var(--epont-dark);
+}
+.brand-epont h3 {
+    color:var(--epont-red);
+}
+.brand-epont .price {
+    background:var(--epont-red);
+}
+h3 {
+    margin:4px 0 8px;
+    font-size:17px;
+    line-height:1.2;
+}
+p {
+    font-size:13px;
+    line-height:1.4;
+    margin:0 0 8px;
+}
+.specs {
+    color:#666;
+    font-size:12px;
+    margin-top:auto;
+    min-height:32px;
+}
+.specs span {
+    display:block;
+    margin-bottom:3px;
+}
+.price {
+    color:white;
+    text-align:center;
+    text-align:left;
+    border-radius:12px;
+    padding:10px;
+    font-weight:bold;
+    font-size:20px;
+    margin-top:12px;
+}
+.hidden {
+    display:none !important;
+}
+.counter {
+    font-size:13px;
+    color:#666;
+    margin-top:10px;
+}
+@media(max-width:600px){
+    header h1{font-size:32px;}
+    .toolbar{position:static;}
+}
+
+.landing{
+    padding:32px 7vw 18px;
+}
+.landing-title{
+    margin:0 0 18px;
+    color:#333;
+    font-size:22px;
+}
+.brand-menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:22px;
+}
+.big-brand{
+    background:white;
+    border-radius:24px;
+    padding:26px;
+    min-height:230px;
+    box-shadow:0 8px 26px rgba(0,0,0,.10);
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+    border:0;
+    text-align:left;
+    font-family:inherit;
+}
+.big-brand:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 34px rgba(0,0,0,.15);
+}
+.big-brand h2{
+    margin:0;
+    font-size:38px;
+    letter-spacing:1px;
+}
+.big-brand p{
+    margin:14px 0 24px;
+    color:#555;
+    font-size:14px;
+    line-height:1.5;
+}
+.big-brand .open{
+    display:inline-block;
+    padding:12px 16px;
+    color:white;
+    border-radius:12px;
+    font-weight:bold;
+}
+.big-brand.viktec-card{
+    border-top:10px solid var(--viktec-yellow);
+}
+.big-brand.viktec-card h2{
+    color:var(--ml-blue);
+}
+.big-brand.viktec-card .open{
+    background:var(--ml-blue);
+}
+.big-brand.epont-card{
+    border-top:10px solid var(--epont-red);
+}
+.big-brand.epont-card h2{
+    color:var(--epont-red);
+}
+.big-brand.epont-card .open{
+    background:var(--epont-red);
+}
+.catalog-section.hidden-section{
+    display:none;
+}
+.back-home{
+    margin-bottom:12px;
+    border:0;
+    background:#e9edf3;
+    color:#333;
+    border-radius:999px;
+    padding:9px 14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+:root {
+    --rotake-red:#D62828;
+    --rotake-gray:#D9D9D9;
+}
+.brand-tabs button[data-brand="rotake"].active {background:var(--rotake-red);color:white;}
+.brand-label.epont {background:#A93226;}
+.brand-label.rotake {background:var(--rotake-red);}
+.brand-epont .meta b {background:#A93226;color:white;}
+.brand-epont .meta em {background:#D6D6D6;color:#333;}
+.brand-epont h3 {color:#A93226;}
+.brand-epont .price {background:#A93226;}
+.brand-rotake .meta b {background:var(--rotake-red);color:white;}
+.brand-rotake .meta em {background:#555;}
+.brand-rotake h3 {color:var(--rotake-red);}
+.brand-rotake .price {background:var(--rotake-red);}
+.big-brand.epont-card{border-top:10px solid #A93226;}
+.big-brand.epont-card h2{color:#A93226;}
+.big-brand.epont-card .open{background:#A93226;}
+.big-brand.rotake-card{border-top:10px solid var(--rotake-red);}
+.big-brand.rotake-card h2{color:var(--rotake-red);}
+.big-brand.rotake-card .open{background:var(--rotake-red);}
+
+header h1 .yellow-title{
+    color:var(--viktec-yellow);
+    display:inline-block;
+}
+header p{
+    margin:12px 0 0;
+    opacity:.96;
+    font-size:17px;
+    font-weight:bold;
+}
+.notice{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    align-items:center;
+    background:#FFF8D6;
+    border:1px solid #F3D36A;
+    border-left:5px solid var(--viktec-yellow);
+    border-radius:12px;
+    color:#333;
+}
+.notice strong{
+    color:#222;
+}
+.notice .notice-block{
+    font-size:13px;
+    line-height:1.45;
+}
+.notice .contact{
+    border-left:1px solid #E2B93B;
+    padding-left:16px;
+}
+.notice .phones{
+    margin-top:6px;
+    font-weight:bold;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+@media(max-width:700px){
+    header h1{font-size:36px;}
+    .notice{grid-template-columns:1fr;}
+    .notice .contact{border-left:0;padding-left:0;border-top:1px solid #E2B93B;padding-top:12px;}
+}
+
+/* Ajuste visual de tarjetas y especificaciones */
+.card{position:relative;overflow:hidden;min-height:455px;}
+.card img{height:190px;}
+.specs{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:3px;
+    min-height:86px;
+    padding:8px 0;
+    margin-top:auto;
+    text-align:left;
+}
+.specs span{display:block;margin-bottom:0;}
+.spec-lines-1{min-height:76px;}
+.spec-lines-2{min-height:82px;}
+.spec-lines-3{min-height:90px;}
+.spec-lines-4{min-height:104px;}
+.spec-lines-5{min-height:118px;}
+
+
+
+/* Alineación izquierda para especificaciones */
+.specs{text-align:left;}
+.price{text-align:center;}
+
+/* Tarjetas más amplias, efecto hover y etiquetas tipo banner */
+.grid{
+    grid-template-columns:repeat(auto-fill,minmax(275px,1fr));
+    gap:24px;
+}
+.card{
+    position:relative;
+    overflow:hidden;
+    min-height:490px;
+    transition:transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{
+    transform:scale(1.035);
+    box-shadow:0 14px 34px rgba(0,0,0,.18);
+    z-index:3;
+}
+.card img{
+    height:215px;
+}
+.specs{
+    text-align:left;
+    justify-content:center;
+}
+.promo-badge{
+    position:absolute;
+    top:16px;
+    right:0;
+    min-width:132px;
+    padding:9px 14px 9px 18px;
+    color:white;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.4px;
+    text-align:center;
+    z-index:5;
+    border-radius:18px 0 0 18px;
+    box-shadow:0 5px 14px rgba(0,0,0,.22);
+}
+.promo-badge::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-13px;
+    border-top:13px solid rgba(0,0,0,.20);
+    border-right:13px solid transparent;
+}
+.promo-badge.liquidacion{
+    background:linear-gradient(135deg,#D62828,#9F1515);
+}
+.promo-badge.oferta{
+    background:linear-gradient(135deg,#FFD233,#E6A700);
+    color:#222;
+}
+.card.has-promo img{
+    padding-top:18px;
+}
+@media(max-width:700px){
+    .grid{grid-template-columns:repeat(auto-fill,minmax(245px,1fr));}
+    .card:hover{transform:none;}
+}
+
+/* ===== Etiqueta promo sin sombra gris inferior ===== */
+.promo-badge{
+    box-shadow:0 4px 12px rgba(0,0,0,.14) !important;
+}
+.promo-badge::after{
+    display:none !important;
+}
+
+/* ===== Colores VIKTEC: azul más claro + amarillo, sin naranja ===== */
+:root{
+    --ml-blue:#1F5F9F;
+    --viktec-yellow:#FFD233;
+    --viktec-orange:#1F5F9F;
+}
+.brand-viktec .meta b{
+    background:var(--viktec-yellow) !important;
+    color:#222 !important;
+}
+.brand-viktec .meta em,
+.brand-label.viktec{
+    background:var(--ml-blue) !important;
+    color:white !important;
+}
+.brand-viktec h3{
+    color:var(--ml-blue) !important;
+}
+.brand-viktec .price{
+    background:var(--ml-blue) !important;
+    color:white !important;
+}
+.big-brand.viktec-card h2{
+    color:var(--ml-blue) !important;
+}
+.big-brand.viktec-card .open{
+    background:var(--ml-blue) !important;
+}
+.brand-tabs button[data-brand="viktec"].active{
+    background:var(--ml-blue) !important;
+    box-shadow:inset 0 -4px 0 var(--viktec-yellow) !important;
+}
+
+/* ===== Encabezado azul más claro ===== */
+header{
+    background:
+      linear-gradient(90deg, rgba(16, 72, 125, 0.96), rgba(21, 92, 163, 0.88)),
+      url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%271000%27%20height%3D%27300%27%20viewBox%3D%270%200%201000%20300%27%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.20%29%27%20stroke-width%3D%273%27%3E%3Cpolygon%20points%3D%27130%2C55%20165%2C35%20200%2C55%20200%2C95%20165%2C115%20130%2C95%27/%3E%3Ccircle%20cx%3D%27165%27%20cy%3D%2775%27%20r%3D%2720%27/%3E%3Cpolygon%20points%3D%27395%2C70%20430%2C50%20465%2C70%20465%2C110%20430%2C130%20395%2C110%27/%3E%3Ccircle%20cx%3D%27430%27%20cy%3D%2790%27%20r%3D%2720%27/%3E%3Cpolygon%20points%3D%27680%2C45%20715%2C25%20750%2C45%20750%2C85%20715%2C105%20680%2C85%27/%3E%3Ccircle%20cx%3D%27715%27%20cy%3D%2765%27%20r%3D%2720%27/%3E%3Cpath%20d%3D%27M520%20190%20q70-120%20155-35%20q-85%2075-155%2035z%27/%3E%3Cpath%20d%3D%27M720%20155%20h130%20l25%2025%20v40%20h-180%20v-40z%27/%3E%3Cpath%20d%3D%27M740%20166%20v65%20M765%20166%20v65%20M790%20166%20v65%20M815%20166%20v65%27/%3E%3C/g%3E%3Cg%20fill%3D%27none%27%20stroke%3D%27rgba%28255%2C255%2C255%2C.11%29%27%20stroke-width%3D%272%27%3E%3Cpolygon%20points%3D%2780%2C185%20105%2C170%20130%2C185%20130%2C215%20105%2C230%2080%2C215%27/%3E%3Ccircle%20cx%3D%27105%27%20cy%3D%27200%27%20r%3D%2713%27/%3E%3Cpolygon%20points%3D%27870%2C60%20895%2C45%20920%2C60%20920%2C90%20895%2C105%20870%2C90%27/%3E%3Ccircle%20cx%3D%27895%27%20cy%3D%2775%27%20r%3D%2713%27/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-size:cover !important;
+    background-position:center !important;
+}
+header h1 .yellow-title{
+    color:var(--viktec-yellow) !important;
+}
+
+
+.brand-menu{
+    align-items:stretch !important;
+}
+.big-brand{
+    min-height:250px !important;
+    height:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:space-between !important;
+}
+.big-brand h2{
+    min-height:46px !important;
+}
+.big-brand p{
+    min-height:70px !important;
+}
+
+
+.grid{
+    align-items:stretch !important;
+}
+.card{
+    min-height:500px !important;
+    display:grid !important;
+    grid-template-rows:215px auto auto 1fr auto !important;
+    gap:0 !important;
+    padding:16px !important;
+}
+.card img{
+    height:215px !important;
+    align-self:start !important;
+}
+.meta{
+    align-self:start !important;
+    min-height:34px !important;
+}
+.card h3{
+    min-height:48px !important;
+    display:flex !important;
+    align-items:flex-start !important;
+    margin:8px 0 8px !important;
+}
+.specs{
+    min-height:118px !important;
+    margin:0 !important;
+    padding:8px 0 !important;
+    text-align:left !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+    align-items:flex-start !important;
+    gap:3px !important;
+    align-self:start !important;
+}
+.specs span{
+    display:block !important;
+    margin:0 !important;
+    text-align:left !important;
+}
+.price{
+    align-self:end !important;
+    margin-top:12px !important;
+    width:100% !important;
+    text-align:center !important;
+}
+
+
+:root{
+    --ml-blue:#1F5F9F;
+    --viktec-yellow:#FFD233;
+    --viktec-orange:#1F5F9F;
+}
+.big-brand.viktec-card h2{
+    color:var(--viktec-yellow) !important;
+    text-shadow:0 1px 0 rgba(0,0,0,.10);
+}
+.big-brand.viktec-card{
+    border-top:10px solid var(--viktec-yellow) !important;
+}
+.big-brand.viktec-card .open{
+    background:var(--ml-blue) !important;
+    box-shadow:inset 0 -5px 0 var(--viktec-yellow) !important;
+}
+.brand-viktec .meta b{
+    background:var(--viktec-yellow) !important;
+    color:#222 !important;
+}
+.brand-viktec .meta em,
+.brand-label.viktec{
+    background:var(--ml-blue) !important;
+    color:white !important;
+}
+.brand-viktec h3{
+    color:var(--ml-blue) !important;
+}
+.brand-viktec .price{
+    background:var(--ml-blue) !important;
+}
+
+
+.big-brand.epont-card .open{
+    background:#A93226 !important;
+    box-shadow:inset 0 -5px 0 #6F1D18 !important;
+}
+.big-brand.rotake-card .open{
+    background:var(--rotake-red) !important;
+    box-shadow:inset 0 -5px 0 #8F1010 !important;
+}
+.brand-tabs button[data-brand="viktec"].active{
+    background:var(--ml-blue) !important;
+    color:white !important;
+    box-shadow:inset 0 -4px 0 var(--viktec-yellow) !important;
+}
+.brand-tabs button[data-brand="epont"].active{
+    background:#A93226 !important;
+    color:white !important;
+    box-shadow:inset 0 -4px 0 #D6D6D6 !important;
+}
+.brand-tabs button[data-brand="rotake"].active{
+    background:var(--rotake-red) !important;
+    color:white !important;
+    box-shadow:inset 0 -4px 0 #D9D9D9 !important;
+}
+
+
+.promo-badge::after{
+    display:none !important;
+}
+
+/* Corrección filtro por marca */
+.hidden{
+    display:none !important;
+}
+.catalog-section.hidden-section{
+    display:none !important;
+}
+
+
+.toolbar{
+    background:rgba(255,255,255,.96) !important;
+    backdrop-filter:blur(6px);
+}
+.notice{
+    font-size:12px !important;
+    padding:9px 12px !important;
+    gap:12px !important;
+}
+.notice .notice-block{
+    font-size:12px !important;
+    line-height:1.35 !important;
+}
+.notice .phones{
+    gap:12px !important;
+    margin-top:4px !important;
+}
+.grid{
+    padding-top:36px !important;
+}
+
+/
+.toolbar{
+    position:sticky !important;
+    top:0 !important;
+    z-index:20 !important;
+    padding:14px 7vw !important;
+}
+
+
+.notice.notice-outside{
+    position:relative !important;
+    z-index:1 !important;
+    margin:14px 7vw 0 !important;
+    width:auto !important;
+}
+
+
+.grid{
+    padding-top:24px !important;
+}
+
+/* Buscador normal limpio */
+.toolbar input{
+    height:48px !important;
+    transition:height .18s ease, font-size .18s ease, box-shadow .18s ease;
+}
+
+/* Al tocar o escribir, el buscador se agranda un poco */
+.toolbar input:focus{
+    height:58px !important;
+    font-size:18px !important;
+    box-shadow:0 0 0 3px rgba(31,95,159,.16) !important;
+    outline:none !important;
+}
+
+/* En celular o pantallas pequeñas, evita que la barra ocupe demasiado */
+@media(max-width:700px){
+    .toolbar{
+        position:sticky !important;
+        padding:12px 5vw !important;
+    }
+    .notice.notice-outside{
+        margin:12px 5vw 0 !important;
+        grid-template-columns:1fr !important;
+    }
+}
+
+/* ===== AVISO STICKY ARRIBA + BARRA COMPACTA ===== */
+.notice.notice-sticky-top{
+    position:sticky !important;
+    top:0 !important;
+    z-index:30 !important;
+    margin:0 !important;
+    border-radius:0 !important;
+    padding:8px 7vw !important;
+    font-size:11px !important;
+    line-height:1.25 !important;
+    background:#FFF8D6 !important;
+}
+.notice.notice-sticky-top .notice-block{
+    font-size:11px !important;
+    line-height:1.25 !important;
+}
+.notice.notice-sticky-top .phones{
+    margin-top:3px !important;
+    gap:12px !important;
+}
+
+/* Barra más pequeña debajo del aviso */
+.toolbar{
+    position:sticky !important;
+    top:54px !important;
+    z-index:29 !important;
+    padding:8px 7vw 10px !important;
+    background:rgba(255,255,255,.97) !important;
+    backdrop-filter:blur(6px);
+}
+.brand-tabs{
+    gap:8px !important;
+    margin-bottom:8px !important;
+}
+.brand-tabs button{
+    padding:7px 12px !important;
+    font-size:12px !important;
+}
+.back-home{
+    padding:7px 12px !important;
+    font-size:12px !important;
+    margin-bottom:8px !important;
+}
+.toolbar input{
+    height:34px !important;
+    padding:7px 12px !important;
+    font-size:13px !important;
+    transition:height .18s ease, font-size .18s ease, box-shadow .18s ease, padding .18s ease;
+}
+.toolbar input:focus{
+    height:56px !important;
+    padding:14px 16px !important;
+    font-size:18px !important;
+    box-shadow:0 0 0 3px rgba(31,95,159,.16) !important;
+    outline:none !important;
+}
+.counter{
+    font-size:11px !important;
+    margin-top:6px !important;
+}
+.grid{
+    padding-top:28px !important;
+}
+
+/* ===== Modal de producto ===== */
+.card{
+    cursor:pointer;
+}
+.product-modal.hidden{
+    display:none !important;
+}
+.product-modal{
+    position:fixed;
+    inset:0;
+    z-index:999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+}
+.product-modal-backdrop{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.46);
+    backdrop-filter:blur(3px);
+}
+.product-modal-box{
+    position:relative;
+    background:white;
+    border-radius:24px;
+    width:min(560px,92vw);
+    max-height:90vh;
+    overflow:auto;
+    box-shadow:0 24px 70px rgba(0,0,0,.35);
+    padding:22px;
+}
+.product-modal-close{
+    position:absolute;
+    top:10px;
+    right:12px;
+    width:36px;
+    height:36px;
+    border:0;
+    border-radius:999px;
+    background:#e9edf3;
+    font-size:26px;
+    line-height:1;
+    cursor:pointer;
+    z-index:2;
+}
+.product-modal-box .card{
+    box-shadow:none !important;
+    padding:0 !important;
+    min-height:auto !important;
+    display:flex !important;
+    transform:none !important;
+    cursor:default !important;
+}
+.product-modal-box .card:hover{
+    transform:none !important;
+    box-shadow:none !important;
+}
+.product-modal-box .card img{
+    height:260px !important;
+    margin-top:12px;
+}
+.product-modal-box .meta{
+    margin-top:10px;
+}
+.product-modal-box h3{
+    font-size:24px !important;
+    min-height:auto !important;
+}
+.product-modal-box .specs{
+    min-height:auto !important;
+    font-size:14px !important;
+    margin-top:10px !important;
+}
+.product-modal-box .price{
+    font-size:26px !important;
+    margin-top:18px !important;
+}
+
+@media(max-width:700px){
+    .notice.notice-sticky-top{
+        padding:7px 5vw !important;
+        grid-template-columns:1fr !important;
+    }
+    .toolbar{
+        top:82px !important;
+        padding:8px 5vw 10px !important;
+    }
+    .product-modal{
+        padding:12px;
+    }
+    .product-modal-box .card img{
+        height:220px !important;
+    }
+}
+
+/* ===== AJUSTE FINAL: AVISO MÁS LEGIBLE ===== */
+.notice.notice-sticky-top{
+    padding:12px 7vw !important;
+}
+.notice.notice-sticky-top .notice-block{
+    font-size:14px !important;
+    line-height:1.45 !important;
+}
+.notice.notice-sticky-top .phones{
+    font-size:14px !important;
+    font-weight:700 !important;
+}
+@media(max-width:700px){
+    .notice.notice-sticky-top .notice-block,
+    .notice.notice-sticky-top .phones{
+        font-size:13px !important;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Catálogo <span class="yellow-title">Maquinaria León</span></h1>
+<p>Herramientas y equipos de taller</p>
+</header>
+<section class="landing" id="landing">
+<h2 class="landing-title">Seleccione una marca</h2>
+<div class="brand-menu">
+<button class="big-brand viktec-card" data-open-brand="viktec">
+<h2>VIKTEC</h2>
+<p>Herramientas especializadas para diagnóstico, motor, frenos, extractores, cubos y accesorios de taller.</p>
+<span class="open">Abrir catálogo VIKTEC</span>
+</button>
+<button class="big-brand epont-card" data-open-brand="epont">
+<h2>EPONT</h2>
+<p>Equipos hidráulicos, gatas, burras, prensas, soportes, camillas y herramientas para taller.</p>
+<span class="open">Abrir catálogo EPONT</span>
+</button>
+<button class="big-brand rotake-card" data-open-brand="rotake">
+<h2>ROTAKE</h2>
+<p>Herramientas neumáticas, llaves de impacto, mototools y cubos de impacto para trabajos de alto torque.</p>
+<span class="open">Abrir catálogo ROTAKE</span>
+</button>
+</div>
+</section>
+<section class="catalog-section hidden-section" id="catalog-section"><div class="notice notice-sticky-top">
+<div class="notice-block">
+  ⚠️ <strong>Imágenes con fines ilustrativos.</strong> El color, empaque, diseño y presentación del producto pueden variar según disponibilidad o cambios realizados por el fabricante sin previo aviso.
+</div>
+<div class="notice-block contact">
+  📦 <strong>Existencias sujetas a disponibilidad.</strong><br/>
+  Para confirmar existencia puede contactarnos a través de<br/>
+<div class="phones">
+<span>📲 WhatsApp: 8361 8586</span>
+<span>📞 Llamada: 2431 3592</span>
+</div>
+</div>
+</div><div class="toolbar"><button class="back-home" id="backHome">← Volver a marcas</button>
+<div class="brand-tabs">
+<button class="active" data-brand="all">Todas</button>
+<button data-brand="viktec">VIKTEC</button>
+<button data-brand="epont">EPONT</button>
+<button data-brand="rotake">ROTAKE</button></div>
+<input id="q" placeholder="Buscar por código, nombre, categoría o marca..."/>
+<div class="counter" id="counter"></div>
+</div><main class="grid" id="grid"><article class="card brand-epont" data-brand="epont">
+<img alt="Burras de 3 TON (Par)" src="IMG EPONT/E1403.jpg"/>
+<div class="meta"><b>E1403</b><em>Burras</em><span class="brand-label epont">EPONT</span></div>
+<h3>Burras de 3 TON (Par)</h3>
+<p class="specs spec-lines-1"><span>Altura máxima: 425mm</span><span>2 unidades</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Burras de 6 TON (Par)" src="IMG EPONT/E1406.jpg"/>
+<div class="meta"><b>E1406</b><em>Burras</em><span class="brand-label epont">EPONT</span></div>
+<h3>Burras de 6 TON (Par)</h3>
+<p class="specs spec-lines-1"><span>Altura máxima: 600mm</span><span>2 unidades</span></p>
+<div class="price">₡35.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Camilla Plástica para Mecánico" src="IMG EPONT/ESP001.jpg"/>
+<div class="meta"><b>ESP001</b><em>Camillas y carritos</em><span class="brand-label epont">EPONT</span></div>
+<h3>Camilla Plástica para Mecánico</h3>
+<p class="specs spec-lines-1"><span>Largo: 40 pulgadas</span><span>Capacidad: 115kg</span></p>
+<div class="price">₡31.900</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Carrito para Herramientas" src="IMG EPONT/YP-2301.jpg"/>
+<div class="meta"><b>YP-2301</b><em>Camillas y carritos</em><span class="brand-label epont">EPONT</span></div>
+<h3>Carrito para Herramientas</h3>
+<p class="specs spec-lines-1"><span>Dimensiones: 80cm x 72cm x 36cm</span></p>
+<div class="price">₡31.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Botella Hidroneumática 20 TON" src="IMG EPONT/E0220HN.jpg"/>
+<div class="meta"><b>E0220HN</b><em>Gatas de botella</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Botella Hidroneumática 20 TON</h3>
+<p class="specs spec-lines-1"><span>Altura mínima: 267mm</span><span>Altura máxima: 490mm</span><span>Altura ajustable: 60mm</span><span>90 PSI</span></p>
+<div class="price">₡81.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Botella 6 TON" src="IMG EPONT/E0206.jpg"/>
+<div class="meta"><b>E0206</b><em>Gatas de botella</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Botella 6 TON</h3>
+<p class="specs spec-lines-1"><span>Altura mínima: 200mm</span><span>Altura máxima: 385mm</span><span>Altura ajustable: 60mm</span></p>
+<div class="price">₡15.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Botella 12 TON" src="IMG EPONT/E03212S.jpg"/>
+<div class="meta"><b>E03212S</b><em>Gatas de botella</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Botella 12 TON</h3>
+<p class="specs spec-lines-1"><span>Altura mínima: 190mm</span><span>Altura máxima: 365mm</span><span>Altura ajustable: 60mm</span></p>
+<div class="price">₡20.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Botella 20 TON" src="IMG EPONT/E0220S.jpg"/>
+<div class="meta"><b>E0220S</b><em>Gatas de botella</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Botella 20 TON</h3>
+<p class="specs spec-lines-1"><span>Altura mínima: 185mm</span><span>Altura máxima: 345mm</span><span>Altura ajustable: 60mm</span></p>
+<div class="price">₡29.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Botella 32 TON" src="IMG EPONT/E0232A.jpg"/>
+<div class="meta"><b>E0232A</b><em>Gatas de botella</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Botella 32 TON</h3>
+<p class="specs spec-lines-1"><span>Altura mínima: 225mm</span><span>Altura máxima: 385mm</span><span>Altura ajustable: 60mm</span></p>
+<div class="price">₡39.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Botella 50 TON" src="IMG EPONT/E0250S.jpg"/>
+<div class="meta"><b>E0250S</b><em>Gatas de botella</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Botella 50 TON</h3>
+<p class="specs spec-lines-1"><span>Altura mínima: 200mm</span><span>Altura máxima: 385mm</span><span>Altura ajustable: 60mm</span></p>
+<div class="price">₡52.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata de Carretillo 2.5 TON Perfil Bajo" src="IMG EPONT/YP1401.jpg"/>
+<div class="meta"><b>YP1401</b><em>Gatas hidráulicas</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata de Carretillo 2.5 TON Perfil Bajo</h3>
+<p class="specs spec-lines-1"><span>Perfil bajo</span><span>Altura mínima: 85mm</span><span>Altura máxima: 385mm</span><span>Bomba de un pistón</span></p>
+<div class="price">₡39.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata Hidráulica 3 TON Perfil Bajo" src="IMG EPONT/EYP1103.jpg"/>
+<div class="meta"><b>EYP1103</b><em>Gatas hidráulicas</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata Hidráulica 3 TON Perfil Bajo</h3>
+<p class="specs spec-lines-1"><span>Perfil bajo</span><span>Altura mínima: 100mm</span><span>Altura máxima: 425mm</span><span>Bomba de un pistón</span></p>
+<div class="price">₡89.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata para Cajas Telescópica" src="IMG EPONT/E103-5A.jpg"/>
+<div class="meta"><b>E103-5A</b><em>Gatas para transmisión</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata para Cajas Telescópica</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 500kg</span><span>Altura mínima: 850mm</span><span>Altura máxima: 1750mm</span></p>
+<div class="price">₡191.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Gata para Cajas 0.5 TON" src="IMG EPONT/E1301.jpg"/>
+<div class="meta"><b>E1301</b><em>Gatas para transmisión</em><span class="brand-label epont">EPONT</span></div>
+<h3>Gata para Cajas 0.5 TON</h3>
+<p class="specs spec-lines-1"><span>Capacidad máxima: 500kg</span><span>Altura mínima: 190mm</span><span>Altura máxima: 680mm</span></p>
+<div class="price">₡149.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Grúa (Pluma) para Motor 2 TON" src="IMG EPONT/EP001.jpg"/>
+<div class="meta"><b>EP001</b><em>Grúas y soportes</em><span class="brand-label epont">EPONT</span></div>
+<h3>Grúa (Pluma) para Motor 2 TON</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 2 toneladas</span><span>Altura máxima: 2 metros</span><span>Patas plegables</span></p>
+<div class="price">₡155.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Prensa Hidráulica 20 TON" src="IMG EPONT/EPONT123.jpg"/>
+<div class="meta"><b>EPONT123</b><em>Prensas hidráulicas</em><span class="brand-label epont">EPONT</span></div>
+<h3>Prensa Hidráulica 20 TON</h3>
+<p class="specs spec-lines-1"><span>Dimensiones: 60cm x 10cm x 155cm</span><span>Altura del área de trabajo: 0 a 950mm</span></p>
+<div class="price">₡179.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Prensa Hidráulica 30 TON" src="IMG EPONT/ESP3001.jpg"/>
+<div class="meta"><b>ESP3001</b><em>Prensas hidráulicas</em><span class="brand-label epont">EPONT</span></div>
+<h3>Prensa Hidráulica 30 TON</h3>
+<p class="specs spec-lines-1"><span>Dimensiones: 64cm x 14cm x 150cm</span><span>Altura del área de trabajo: 0 a 900mm</span></p>
+<div class="price">₡239.000</div>
+</article><article class="card brand-epont" data-brand="epont">
+<img alt="Soporte para Motor 1000 Lbs" src="IMG EPONT/EES1000.jpg"/>
+<div class="meta"><b>EES1000</b><em>Grúas y soportes</em><span class="brand-label epont">EPONT</span></div>
+<h3>Soporte para Motor 1000 Lbs</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 1000 libras</span><span>Cabeza giratoria: 360°</span></p>
+<div class="price">₡49.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Cubo de Impacto 1/2" 12mm' src="IMG ROTAKE/RT-012K.jpg"/>
+<div class="meta"><b>RT-012K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Cubo de Impacto 1/2" 12mm</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span>Medida: 12mm</span><span>Largo: 8cm</span></p>
+<div class="price">₡2.500</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Cubo de Impacto 1/2" 14 mm' src="IMG ROTAKE/RT-014K.jpg"/>
+<div class="meta"><b>RT-014K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Cubo de Impacto 1/2" 14mm</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span></span>Medida: 14mm</span><span>Largo: 8cm</span></p>
+<div class="price">₡2.500</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Cubo de Impacto 1/2" 19 mm' src="IMG ROTAKE/RT-019K.jpg"/>
+<div class="meta"><b>RT-019K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Cubo de Impacto 1/2" 19mm</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span>Medida: 19mm</span><span>Largo: 8cm</span></p>
+<div class="price">₡2.500</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Cubo de Impacto 1/2" 21 mm' src="IMG ROTAKE/RT-021K.jpg"/>
+<div class="meta"><b>RT-021K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Cubo de Impacto 1/2" 21mm</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span></span>Medida: 21mm</span><span>Largo: 8cm</span></p>
+<div class="price">₡2.500</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Juego de Cubos de Impacto 1"' src="IMG ROTAKE/RT-002K.jpg"/>
+<div class="meta"><b>RT-002K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Juego de Cubos de Impacto 1"</h3>
+<p class="specs spec-lines-5"><span>Cuadro: 1"</span><span>Medidas: 21, 22, 24, 27, 32, 33, 38, 41mm </span><span>Largo: 8cm</span></p>
+<div class="price">₡39.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Juego de Cubos de Impacto 1/2"' src="IMG ROTAKE/RT-013K.jpg"/>
+<div class="meta"><b>RT-013K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Juego de Cubos de Impacto 1/2"</h3>
+<p class="specs spec-lines-5"><span>Cuadro: 1/2"</span><span>Medidas: 10, 12, 14, 15, 17, 19, 21, 22, 24, 27, 30, 32mm </span><span>Largo: 8cm</span></p>
+<div class="price">₡28.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Juego de Cubos de Impacto 3/4"' src="IMG ROTAKE/RT-001K.jpg"/>
+<div class="meta"><b>RT-001K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Juego de Cubos de Impacto 3/4"</h3>
+<p class="specs spec-lines-5"><span>Cuadro: 3/4"</span><span>Medidas: 17, 19, 22, 24, 27, 32, 36, 38mm </span><span>Largo: 8cm</span></p>
+<div class="price">₡35.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Juego de Cubos de Impacto 3/4" 21 Pzs' src="IMG ROTAKE/RT-040K.jpg"/>
+<div class="meta"><b>RT-040K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Juego de Cubos de Impacto 3/4" 21 Pzs</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 3/4"<span></span>Medidas: 17-50mm<span></span>Incluye: extensiones de 5" y 10"<span></span>Maneral de 18"<span></span>Largo de cubo: 8cm</span></p>
+<div class="price">₡89.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Llave de Impacto 1" Corta' src="IMG ROTAKE/RT-5568.jpg"/>
+<div class="meta"><b>RT-5568</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Llave de Impacto 1" Corta</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 1" Torque máximo: 1330 ft.lbs<span></span>Consumo: 12 CFM<span></span>Velocidad: 4000 RPM</span></p>
+<div class="price">₡121.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Llave de Impacto 1" Larga' src="IMG ROTAKE/RT-5665K.jpg"/>
+<div class="meta"><b>RT-5665K</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Llave de Impacto 1" Larga</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 1" Torque máximo: 1696 ft.lbs<span></span>Consumo: 23 CFM<span></span>Velocidad: 4000RPM</span></p>
+<div class="price">₡150.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Llave de Impacto 1/2"' src="IMG ROTAKE/RT-5270K.jpg"/>
+<div class="meta"><b>RT-5270K</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Llave de Impacto 1/2"</h3>
+<p class="specs spec-lines-5"><span>Cuadro: 1/2"<span></span>Torque máximo: 530 ft.lbs<span></span>Cubos: 9, 10, 11, 13, 14, 17, 19, 22mm<span></span>Incluye: extensión de 5"</span></p>
+<div class="price">₡55.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Llave de Impacto 3/4"' src="IMG ROTAKE/RT-5567.jpg"/>
+<div class="meta"><b>RT-5567</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Llave de Impacto 3/4"</h3>
+<p class="specs spec-lines-1"><span>Cuadro: 3/4" Torque máximo: 1330 ft.lbs<span></span>Consumo: 12 CFM<span></span>Velocidad: 4000RPM</span></p>
+<div class="price">₡139.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Llave de Impacto 18V 1/2"' src="IMG ROTAKE/RT-8811.jpg"/>
+<div class="meta"><b>RT-8811</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Llave de Impacto 18V 1/2"</h3>
+<p class="specs spec-lines-2"><span>Cuadro: 1/2"<span></span>Voltaje: 18V<span></span>Torque máximo: 680Nm/500 ft.lbs<span></span>Velocidad: 2700/2200/1700RPM<span></span>Incluye: 2 baterías 4.0Ah</span><span>cargador y estuche</span></p>
+<div class="price">₡115.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Llave de Impacto 18V 3/4"' src="IMG ROTAKE/RT-8813B.jpg"/>
+<div class="meta"><b>RT-8813B</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Llave de Impacto 18V 3/4"</h3>
+<p class="specs spec-lines-2"><span>Cuadro: 3/4"<span></span>Voltaje: 18V<span></span>Torque máximo: 1980Nm/1450 ft.lbs<span></span>Velocidad: 1800/1500/1000RPM<span></span>Incluye: 2 baterías 4.0Ah</span><span>cargador y estuche</span></p>
+<div class="price">₡219.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img "="" alt="Mototool Neumático 1/4\" src="IMG ROTAKE/RT-1108.jpg"/>
+<div class="meta"><b>RT-1108</b><em>Herramientas neumáticas</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Mototool Neumático 1/4"</h3>
+<p class="specs spec-lines-1"><span>Velocidad: 25.000RPM<span></span>Consumo: 3 CFM<span></span>Entrada de aire: 1/4"</span></p>
+<div class="price">₡24.000</div>
+</article><article class="card brand-rotake" data-brand="rotake">
+<img alt='Mototool Neumático 1/4" 13 Pzs' src="IMG ROTAKE/RT-1206K-P.jpg"/>
+<div class="meta"><b>RT-1206K-P</b><em>Herramientas neumáticas</em><span class="brand-label rotake">ROTAKE</span></div>
+<h3>Mototool Neumático 1/4" 13 Pzs</h3>
+<p class="specs spec-lines-1"><span>Velocidad: 22.000RPM<span></span>Consumo: 4 CFM<span></span>Entrada de aire: 1/4"<span></span>Incluye: accesorios</span></p>
+<div class="price">₡17.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Adaptadores de 6 Pzs" src="IMG VIKTEC/VT01619.jpg"/>
+<div class="meta"><b>VT01619</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Adaptadores de 6 Pzs</h3>
+<p class="specs spec-lines-4"><span>Reductores:</span><span>3/4"Hx1/2"M, 1/2"Hx3/8M, 3/8"Hx1/4"M</span><span>Adaptadores:</span><span>1/2"Hx3/4"M, 3/8"Hx1/2"M, 1/4"Hx3/8"M</span></p>
+<div class="price">₡14.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Adaptadores de 8 Pzs" src="IMG VIKTEC/VT13098.jpg"/>
+<div class="meta"><b>VT13098</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Adaptadores de 8 Pzs</h3>
+<p class="specs spec-lines-4"><span>Reductores:</span><span>3/8"Hx1/4"M, 1/4"Hx3/8"M, 3/8"Hx1/2"M, 1/2"Hx3/8"M</span><span>Adaptadores:</span><span>1/2"Hx3/4"M, 3/4"Hx1/2"M, 3/4"Hx1"M, 1"Hx3/4"M</span></p>
+<div class="price">₡24.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Alicate Extractor de Clips" src="IMG VIKTEC/VT01171.jpg"/>
+<div class="meta"><b>VT01171</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Alicate Extractor de Clips</h3>
+<p class="specs spec-lines-3"><span>Longitud del eje flexible: 630 mm</span><span>Aperatura máxima: 5.1cm</span><span>Rango de Trabajo: 0-5cm</span></p>
+<div class="price">₡13.500</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Alicate para Resortes de Válvulas" src="IMG VIKTEC/VT01829.jpg"/>
+<div class="meta"><b>VT01829</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Alicate para Resortes de Válvulas</h3>
+<p class="specs spec-lines-4"><span>Compatible con motores:</span><span>OHV</span><span>OHC</span><span>CVH</span></p>
+<div class="price">₡13.000</div>
+</article><article class="card brand-viktec has-promo" data-brand="viktec"><div class="promo-badge liquidacion">LIQUIDACIÓN</div>
+<img alt="Alineador de Clutch Autoajustable" src="IMG VIKTEC/VT01373.jpg"/>
+<div class="meta"><b>VT01373</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Alineador de Clutch Autoajustable</h3>
+<p class="specs spec-lines-2"><span>Centrado: 15/23, 15/28, 15/34, 21/23, 20/23 y 14/15/20mm</span><span>Roscas de volante: M6x1.00, M7x1.00, M8x1.25</span></p>
+<div class="price">₡45.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Alineador para Clutch" src="IMG VIKTEC/VT13557.jpg"/>
+<div class="meta"><b>VT13557</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Alineador para Clutch</h3>
+<p class="specs spec-lines-1"><span>Incluye: 2 expansores</span></p>
+<div class="price">₡10.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Asiento Hidráulico con Gavetas para Mecánico" src="IMG VIKTEC/VT17679B.jpg"/>
+<div class="meta"><b>VT17679B</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Asiento Hidráulico con Gavetas para Mecánico</h3>
+<p class="specs spec-lines-3"><span>3 Gavetas corredizas</span><span>1 Bandeja porta-aerosoles</span><span>Peso máximo soportado: 140 kg</span></p>
+<div class="price">₡55.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Asiento Hidráulico para Mecánico" src="IMG VIKTEC/VTN1013.jpg"/>
+<div class="meta"><b>VTN1013</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Asiento Hidráulico para Mecánico</h3>
+<p class="specs spec-lines-3"><span>Pistón hidráulico</span><span>Rango de altura: 15-20 pulgadas</span><span>Peso máximo soportado: 110 kg</span></p>
+<div class="price">₡32.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Cobertor Magnético para Guardabarros" src="IMG VIKTEC/VT14015.jpg"/>
+<div class="meta"><b>VT14015</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Cobertor Magnético para Guardabarros</h3>
+<p class="specs spec-lines-2"><span>Sujeción magnética y ganchos</span><span>Medidas: 80cm x 60cm</span></p>
+<div class="price">₡10.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Compresor de Anillos de 4"' src="IMG VIKTEC/VT01098B.jpg"/>
+<div class="meta"><b>VT01098B</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor de Anillos de 4"</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 4"</span><span>Rango: 53-175mm</span></p>
+<div class="price">₡6.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Compresor de Anillos de 6"' src="IMG VIKTEC/VT01098.jpg"/>
+<div class="meta"><b>VT01098</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor de Anillos de 6"</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 6"</span><span>Rango: 60-195mm</span></p>
+<div class="price">₡8.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Compresor de Resortes de Válvula (Motocicleta)" src="IMG VIKTEC/VT01030B.jpg"/>
+<div class="meta"><b>VT01030B</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor de Resortes de Válvula (Motocicleta)</h3>
+<p class="specs spec-lines-3"><span>Adaptadores: Ø16, Ø19, Ø23, Ø25 y Ø30mm</span><span>Extensiones: 70, 110 y 120mm</span><span>Tipo: C</span></p>
+<div class="price">₡17.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Compresor de Resortes Profesional" src="IMG VIKTEC/VT01032B.jpg"/>
+<div class="meta"><b>VT01032B</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor de Resortes Profesionales</h3>
+<p class="specs spec-lines-4"><span>Capacidad máxima: 1000kg</span><span>Rango: 65-125mm, 88-160mm, 126-212mm</span><span>Apertura máxima: 265mm</span><span>Cabeza de tornillo: 21mm</span></p>
+<div class="price">₡67.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Compresor de Resortes Reforzado" src="IMG VIKTEC/VT13119.jpg"/>
+<div class="meta"><b>VT13119</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor de Resortes Reforzado</h3>
+<p class="specs spec-lines-4"><span>Capacidad máxima: 1000kg</span><span>Rango: 23-280mm</span><span>Apertura máxima: 280 mm</span><span>Cabeza de tornillo: 19mm</span></p>
+<div class="price">₡32.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Compresor de Resortes" src="IMG VIKTEC/VT01031B.jpg"/>
+<div class="meta"><b>VT01031B</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor para Resortes</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Apertura máxima: 370mm</span></p>
+<div class="price">₡15.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Compresor Pistón Caliper de Frenos" src="IMG VIKTEC/VT01133C.jpg"/>
+<div class="meta"><b>VT01133C</b><em>Frenos</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Compresor Pistón Caliper de Frenos</h3>
+<p class="specs spec-lines-2"><span>Uso liviano</span><span>Compatible con mayoría de vehículos</span></p>
+<div class="price">₡10.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Cortadores de Asientos de Inyectores Diesel" src="IMG VIKTEC/VT01311.jpg"/>
+<div class="meta"><b>VT01311</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Cortadores de Asientos de Inyectores Diesel</h3>
+<p class="specs spec-lines-3"><span>15 x 17mm plano para inyector universal</span><span>17 x 17mm/17 x 19mm para inyector Bosch</span><span>17 x 17mm angular para inyector Mercedes CDI</span></p>
+<div class="price">₡22.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Detector de Fugas de Cilindro" src="IMG VIKTEC/VT01060B.jpg"/>
+<div class="meta"><b>VT01060B</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Detector de Fugas de Cilindro</h3>
+<p class="specs spec-lines-3"><span>Rango: Manómetro dual (0-100 PSI / 0-7 Bar)</span><span>Adaptadores de bujía: 10 mm, 12 mm y 14 mm</span><span>Medidor con escala porcentual</span></p>
+<div class="price">₡29.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Brazo (Rótulas y Terminales)" src="IMG VIKTEC/VT01411.jpg"/>
+<div class="meta"><b>VT01411</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Brazo (Rótulas y Terminales)</h3>
+<p class="specs spec-lines-1"><span>Apertura máxima: 7" (178 mm)</span></p>
+<div class="price">₡17.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Bujes y Rótulas 10 Pzs" src="IMG VIKTEC/VT01015.jpg"/>
+<div class="meta"><b>VT01015</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Bujes y Rótulas 10 Pzs</h3>
+<p class="specs spec-lines-3"><span>Prensa tipo "C"</span><span>Tubos receptores: 2-3/4" x 3", 2-1/4" x 2-1/2" y 1-3/4" x 2"</span><span>Adaptadores de instalación y extracción</span></p>
+<div class="price">₡39.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Bujes y Rótulas 21 Pzs" src="IMG VIKTEC/VT01017.jpg"/>
+<div class="meta"><b>VT01017</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Bujes y Rótulas 21 Pzs</h3>
+<p class="specs spec-lines-3"><span>Prensa tipo "C"</span><span>Tubos receptores: 1-3/4" x 2", 2-1/4" x 2-1/2" y 2-3/4" x 3"</span><span>Adaptadores de instalación y extracción</span></p>
+<div class="price">₡55.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Inyectores Diesel" src="IMG VIKTEC/VT01086.jpg"/>
+<div class="meta"><b>VT01086</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Inyectores Diesel</h3>
+<p class="specs spec-lines-3"><span>Barra de 7 pulgadas (178 mm)</span><span>Martillo deslizante de 1.3 libras (0.6 kg)</span><span>Adaptadores de rosca: M8, M12 y M14</span></p>
+<div class="price">₡14.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Inyectores FSI" src="IMG VIKTEC/VT01365.jpg"/>
+<div class="meta"><b>VT01365</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Inyectores FSI</h3>
+<p class="specs spec-lines-2"><span>Motores VAG 1.4 a 4.2 FSI/TSI</span><span>Medidas principales: 123x76mm, 114x40mm, 119x20mm, 27x4mm, 35x7mm, 115x10mm, 110x8mm y 24mm</span></p>
+<div class="price">₡39.000</div>
+</article><article class="card brand-viktec has-promo" data-brand="viktec"><div class="promo-badge liquidacion">LIQUIDACIÓN</div>
+<img alt="Extractor de Inyectores para Motor Diesel" src="IMG VIKTEC/VT01388.jpg"/>
+<div class="meta"><b>VT01388</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Inyectores para Motor Diesel</h3>
+<p class="specs spec-lines-2"><span>Para sistemas common rail</span><span>Mazos: 1.6kg, 2.7kg, 5.1kg</span></p>
+<div class="price">₡90.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Puntas de Eje" src="IMG VIKTEC/VT01392B.jpg"/>
+<div class="meta"><b>VT01392B</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Puntas de Eje</h3>
+<p class="specs spec-lines-2"><span>Compatible con la mayoría de vehículos</span><span>Ajustable en 9 niveles de altura</span></p>
+<div class="price">₡17.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Roles (Guillotina)" src="IMG VIKTEC/VT01209.jpg"/>
+<div class="meta"><b>VT01209</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Roles (Guillotina)</h3>
+<p class="specs spec-lines-4"><span>Separadores de 30 a 50mm (2") y 50 a 75mm (3")</span><span>Tornillo de 180mm</span><span>Transversal de 160mm</span><span>Extensiones: 4x130mm y 4x105mm</span></p>
+<div class="price">₡35.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Roles de Bocina" src="IMG VIKTEC/VT01021.jpg"/>
+<div class="meta"><b>VT01021</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Roles de Bocina</h3>
+<p class="specs spec-lines-3"><span>Tornillos de 32mm y 38mm</span><span>Manga externa: 102, 91, 86, 76mm</span><span>Cubos: 50, 55, 60, 64, 67, 70, 72, 74, 75, 78, 82, 84 y 88mm</span></p>
+<div class="price">₡45.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Roles Internos 5 Pzs" src="IMG VIKTEC/VT01004.jpg"/>
+<div class="meta"><b>VT01004</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Roles Internos 5 Pzs</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 11-32mm</span><span>Medidas de pinzas: 11-16mm, 15-19mm, 18-25mm, 26-32mm</span></p>
+<div class="price">₡28.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Roles 8 Pzs 75-105mm" src="IMG VIKTEC/VT01210.jpg"/>
+<div class="meta"><b>VT01210</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Roles 8 Pzs 75-105mm</h3>
+<p class="specs spec-lines-4"><span>Separadores de 75 a 105mm (3-4")</span><span>Tornillo de 180mm</span><span>Transversal de 160mm</span><span>Extensiones: 4x200mm</span></p>
+<div class="price">₡45.000</div>
+</article><article class="card brand-viktec has-promo" data-brand="viktec"><div class="promo-badge liquidacion">LIQUIDACIÓN</div>
+<img alt="Extractor de Rótulas de Cremallera 35-45mm" src="IMG VIKTEC/VT01321A.jpg"/>
+<div class="meta"><b>VT01321A</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Rótulas de Cremallera 35-45mm</h3>
+<p class="specs spec-lines-2"><span>Rango: 35-45 mm</span><span>Compatible con ratchet de 1/2" o cubo de 27mm</span></p>
+<div class="price">₡20.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor de Volantes y Poleas" src="IMG VIKTEC/VT01007.jpg"/>
+<div class="meta"><b>VT01007</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor de Volantes y Poleas</h3>
+<p class="specs spec-lines-2"><span>Tornillo de fuerza: 5" de longitud (rosca 3/4"-16)</span><span>Pernos de tracción (10 Pzs): Medidas en pulgadas de 5/16" x 4", 1/4" x 3", 1/4" x 2" y 5/16" x 2"</span></p>
+<div class="price">₡15.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor Polea de Alternador 18 Pzs" src="IMG VIKTEC/VT01318.jpg"/>
+<div class="meta"><b>VT01318</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor Polea de Alternador 18 Pzs</h3>
+<p class="specs spec-lines-3"><span>Cubos combinadOs (33T): 1/2" (T50x113mm, M10x113mm) y 3/8" (M10x80mm)</span><span>Adaptadores hexagonales: 22mm, 22x28, 19x28mm</span><span>Adaptador 1/2"x10mm hexagonal</span></p>
+<div class="price">₡27.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor Rótula 19mm" src="IMG VIKTEC/VT01013.jpg"/>
+<div class="meta"><b>VT01013</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor Rótula 19mm</h3>
+<p class="specs spec-lines-1"><span>Apertura: 19 mm</span></p>
+<div class="price">₡15.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor Tapa de Tanque de Combustible" src="IMG VIKTEC/VT01857.jpg"/>
+<div class="meta"><b>VT01857</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor Tapa de Tanque de Combustible</h3>
+<p class="specs spec-lines-2"><span>Rango: 89-170mm</span><span>Cubo: 16mm</span></p>
+<div class="price">₡10.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Extractor Universal Rótulas" src="IMG VIKTEC/VT01417.jpg"/>
+<div class="meta"><b>VT01417</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Extractor Universal Rótulas</h3>
+<p class="specs spec-lines-1"><span>Apertura: 22 mm</span></p>
+<div class="price">₡13.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Herramienta para Abrazaderas de Homocinética" src="IMG VIKTEC/VT01148.jpg"/>
+<div class="meta"><b>VT01148</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Herramienta para Abrazaderas de Homocinética</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 10mm X 1.0mm</span></p>
+<div class="price">₡8.500</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Herramienta para Caliper de Frenos" src="IMG VIKTEC/VT01027.jpg"/>
+<div class="meta"><b>VT01027</b><em>Frenos</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Herramienta para Caliper de Frenos</h3>
+<p class="specs spec-lines-3"><span>Kit de 21 Pzs (17 adaptadores de pistón)</span><span>Doble husillo (rosca derecha e izquierda)</span><span>Compatible con la mayoría de vehículos</span></p>
+<div class="price">₡20.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Alicates para Abrazaderas" src="IMG VIKTEC/VT01068.jpg"/>
+<div class="meta"><b>VT01068</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Alicates para Abrazaderas</h3>
+<p class="specs spec-lines-3"><span>6 alicates para distintos tipos de gazas</span><span>Alicate de aplicación remota con cable</span><span>Destornillador y gancho extractor</span></p>
+<div class="price">₡34.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos Allen 1/2"' src="IMG VIKTEC/VT13386.jpg"/>
+<div class="meta"><b>VT13386</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Allen 1/2"</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Cubos: 4, 5, 6, 8, 10, 12, 14, 17, 19mm</span></p>
+<div class="price">₡15.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos Allen Extra Largos de 3/8" 7 Pzs' src="IMG VIKTEC/VT18373.jpg"/>
+<div class="meta"><b>VT18373</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Allen Extra Largos de 3/8" 7 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 3/8"</span><span>T10, T15, T20, T25, T27, T30, T40</span></p>
+<div class="price">₡6.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos de 1/4" 130 Pzs' src="IMG VIKTEC/VT19239.jpg"/>
+<div class="meta"><b>VT19239</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos de 1/4" 130 Pzs</h3>
+<p class="specs spec-lines-3"><span>130 Pzs</span><span>Cubos: 4, 4.4, 5, 5.5, 6, 7, 8, 9, 10, 11, 12, 13, 14mm</span><span>100 puntas variadas</span></p>
+<div class="price">₡18.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos de 1/4" 46 Pzs' src="IMG VIKTEC/VT13011.jpg"/>
+<div class="meta"><b>VT13011</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos de 1/4" 46 Pzs</h3>
+<p class="specs spec-lines-3"><span>46 Pzs</span><span>Cubos: 4, 4.4, 5, 5.5, 6, 7, 8, 9, 10, 11, 12, 13, 14mm</span><span>21 puntas variadas</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos de 3/8" 36 Pzs' src="IMG VIKTEC/VT13326.jpg"/>
+<div class="meta"><b>VT13326</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos de 3/8" 36 Pzs</h3>
+<p class="specs spec-lines-4"><span>36 Pzs</span><span>Cubos: 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21mm</span><span>Extensión de 150mm</span><span>18 puntas variadas</span></p>
+<div class="price">₡22.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos de 1/4" y 1/2" 94 Pzs' src="IMG VIKTEC/VT13001.jpg"/>
+<div class="meta"><b>VT13001</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos de 1/4" y 1/2" 94 Pzs</h3>
+<p class="specs spec-lines-4"><span>94 Pzs</span><span>Cubos 1/4": 4-14mm, largos de 6-13mm</span><span>Cubos 1/2": 10-32 mm, largos de 14, 15, 17 y 19mm, bujías 16 y 21mm</span><span>33 Puntas varias</span></p>
+<div class="price">₡49.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos de Impacto Allen de 1/2"' src="IMG VIKTEC/VT13101.jpg"/>
+<div class="meta"><b>VT13101</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos de Impacto Allen de 1/2"</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Cubos: H5, H6, H8, H10, H12, H14, H17, H19</span></p>
+<div class="price">₡18.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos de Impacto Extra Largos de 1/2"' src="IMG VIKTEC/VT18164C.jpg"/>
+<div class="meta"><b>VT18164C</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos de Impacto Extra Largos de 1/2"</h3>
+<p class="specs spec-lines-3"><span>Espiga: 1/2"</span><span>Cubos: 17, 19, 21mm</span><span>Largo: 150mm</span></p>
+<div class="price">₡23.500</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Cubos Estrella 12 Pzs" src="IMG VIKTEC/VT13024.jpg"/>
+<div class="meta"><b>VT13024</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Estrella 12 Pzs</h3>
+<p class="specs spec-lines-3"><span>Cubos 1/4": E4, E5, E6, E7, E8</span><span>Cubos 3/8": E10, E11, E12, E14, E16</span><span>Cubos 1/2": E18, E20, E22, E24</span></p>
+<div class="price">₡7.500</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Cubos Torx y Estrella 16 Pzs" src="IMG VIKTEC/VT13345.jpg"/>
+<div class="meta"><b>VT13345</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Estrella y Torx 1/2" 16 Pzs</h3>
+<p class="specs spec-lines-3"><span>16 Pzs</span><span>Cubos Estrella: E10, E11, E12, E14, E16, E18, E20, E22, E24mm</span><span>Cubos Torx: T30, T40, T45, T50, T60, T70</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Cubos para Aceite" src="IMG VIKTEC/VT13198.jpg"/>
+<div class="meta"><b>VT13198</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos para Aceite</h3>
+<p class="specs spec-lines-2"><span>Espiga: 3/8"</span><span>Cubos: 8, 10, 12, 14mm</span></p>
+<div class="price">₡12.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Cubos para Sensor de Oxígeno" src="IMG VIKTEC/VT01042.jpg"/>
+<div class="meta"><b>VT01042</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos para Sensor de Oxígeno</h3>
+<p class="specs spec-lines-2"><span>1/2": 29x90mm (6 puntos), 7/8"x50mm (Offset), 27x78mm (12 puntos)</span><span>3/8": 7/8"x90mm, 7/8"x80mm, 27x75mm (6 puntos), 7/8"x30mm (Offset)</span></p>
+<div class="price">₡25.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Cubos para Tuerca de Ejes 9 Pzs" src="IMG VIKTEC/VT01645D.jpg"/>
+<div class="meta"><b>VT01645D</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos para Tuerca de Ejes 9 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Cubos: 29, 30, 31, 32, 33, 34, 35, 36, 38mm</span></p>
+<div class="price">₡32.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos Portamachos de 1/4" 10 Pzs' src="IMG VIKTEC/VT18169.jpg"/>
+<div class="meta"><b>VT18169</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Portamachos de 1/4" 10 Pzs</h3>
+<p class="specs spec-lines-3"><span>Rango general M1.5 a M14</span><span>1/4": #1x2.8mm, #2x3.4mm, #3x4.0mm, #3.5x4.5mm, #4x4.6mm, #4.5x5.4mm</span><span>3/8": #5x6.4mm, #6x7.3mm, #7x7.0mm, #8x8.4mm</span></p>
+<div class="price">₡14.500</div>
+</article><article class="card brand-viktec has-promo" data-brand="viktec"><div class="promo-badge liquidacion">LIQUIDACIÓN</div>
+<img alt="Juego Cubos 12 puntos (Spline) 16 Pzs" src="IMG VIKTEC/VT13776.jpg"/>
+<div class="meta"><b>VT13776</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos 12 puntos (Spline) 16 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Cubos: 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 24mm</span></p>
+<div class="price">₡13.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos 12 puntos tipo "M" 26 Pzs' src="IMG VIKTEC/VT13749.jpg"/>
+<div class="meta"><b>VT13749</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos 12 puntos tipo "M" 26 Pzs</h3>
+<p class="specs spec-lines-4"><span>Espiga de 1/2"</span><span>Cubos 5.5cm largo: M5 a M16</span><span>Cubos 10cm largo: M5 a M14</span><span>Cubos 14cm largo: M5 a M12</span></p>
+<div class="price">₡34.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Cubos Spline 12 puntos 19 Pzs" src="IMG VIKTEC/VT13394.jpg"/>
+<div class="meta"><b>VT13394</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Spline 12 puntos 19 Pzs</h3>
+<p class="specs spec-lines-3"><span>Espiga: 1/2"</span><span>E-Torx: E10, E11, E12, E14, E16, E18, E20, E22, E24</span><span>Puntas Torx: T20, T25, T27, T30, T40, T45, T50, T55, T60, T70</span></p>
+<div class="price">₡17.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos Torx 1/4" y 3/8"' src="IMG VIKTEC/VT13117.jpg"/>
+<div class="meta"><b>VT13117</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Torx 1/4" y 3/8"</h3>
+<p class="specs spec-lines-2"><span>1/4": T10, T15, T20, T25, T27, T30</span><span>3/8": T40, T45, T50, T55, T60</span></p>
+<div class="price">₡8.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Juego de Cubos Torx/Estrella de 1/4", 3/8" y 1/2" 38 Pzs' src="IMG VIKTEC/VT13373.jpg"/>
+<div class="meta"><b>VT13373</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Cubos Torx/Estrella de 1/4", 3/8" y 1/2" 38 Pzs</h3>
+<p class="specs spec-lines-3"><span>Cubos E-Torx: E4 a E24</span><span>Puntas Torx: T8 a T70</span><span>Espigas: 1/4", 3/8" y 1/2"</span></p>
+<div class="price">₡23.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Desacople Rápido para A/C" src="IMG VIKTEC/VT01178.jpg"/>
+<div class="meta"><b>VT01178</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Desacople Rápido para A/C</h3>
+<p class="specs spec-lines-3"><span>Para líneas de A/C y combustible</span><span>Acoples con cierre de resorte: 3/8", 1/2", 3/4"</span><span>Acoples por color: 5/16", 3/8", 1/2", 5/8", 3/4", 7/8"</span></p>
+<div class="price">₡29.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Extractor de Bushing 26 Pzs" src="IMG VIKTEC/VT01302A.jpg"/>
+<div class="meta"><b>VT01302A</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Extractor de Bushing 26 Pzs</h3>
+<p class="specs spec-lines-5"><span>20 adaptadores de 34-72 mm</span><span>ID: 34-72mm</span><span>OD: 44-82mm</span><span>Incremento: 2mm</span><span>4 husillos extractores</span></p>
+<div class="price">₡81.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Extractor de Volante (Motocicleta)" src="IMG VIKTEC/VT01845.jpg"/>
+<div class="meta"><b>VT01845</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Extractor de Volante (Motocicleta)</h3>
+<p class="specs spec-lines-2"><span>Extractores simples: M14 x 1.5, M16 x 1.5, M18 x 1.5, M19 x 1.0, M28 x 1.5</span><span>Extractores de dobles: M28x1.0/M26x1.0, M25x1.5/M22x1.0, M26x1.5/M22x1.5, M27x1.25/M20x 1.0, M27 x 1.0L/M24x1.0 (L: Rosca izquierda)</span></p>
+<div class="price">₡26.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Extractor Rótula de Cremallera" src="IMG VIKTEC/VT01187B.jpg"/>
+<div class="meta"><b>VT01187B</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Extractor Rótula de Cremallera</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Adaptadores: 29mm, 1-3/16", 1-1/4", 32.5mm, 1-5/16", 33.5mm, 1-3/8", 1-7/16", 1-1/2"</span></p>
+<div class="price">₡29.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Ganchos y Raspador" src="IMG VIKTEC/VT01118.jpg"/>
+<div class="meta"><b>VT01118</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Ganchos y Raspador</h3>
+<p class="specs spec-lines-1"><span>Ganchos, puntas y raspador para limpieza y extracción</span></p>
+<div class="price">₡10.000</div></article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Llaves Abocinadas 6 Pzs" src="IMG VIKTEC/VT19089.jpg"/>
+<div class="meta"><b>VT19089</b><em>Llaves y palancas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Llaves Abocinadas 6 Pzs</h3>
+<p class="specs spec-lines-1"><span>Medidas: 8x10mm, 9x11mm, 10x12mm, 13x14mm, 15x17mm, 17x19mm</span></p>
+<div class="price">₡18.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Luces para Probar Inyectores" src="IMG VIKTEC/VT14203A.jpg"/>
+<div class="meta"><b>VT14203A</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Luces para Probar Inyectores</h3>
+<p class="specs spec-lines-1"><span>Compatibilidad con luz NOID: GM TBI, GM SCPI, GM PFI, GM MULTEC2, Bosch2, FORD TBI, Bosch PFI</span></p>
+<div class="price">₡25.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de O-Ring 419 Pzs" src="IMG VIKTEC/VT01180.jpg"/>
+<div class="meta"><b>VT01180</b><em>Accesorios de taller</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de O-Ring 419 Pzs</h3>
+<p class="specs spec-lines-1"><span>419 O-rings surtidos</span></p>
+<div class="price">₡7.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Puntas Hexagonales 19 Pzs" src="IMG VIKTEC/VT07013.jpg"/>
+<div class="meta"><b>VT07013</b><em>Cubos y accesorios</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Puntas Hexagonales 19 Pzs</h3>
+<p class="specs spec-lines-3"><span>1/4": H3, H4, H5, H6, H7, H8mm</span><span>1/2" cortos: H6, H7, H8, H10, H12, H14mm</span><span>1/2" largos: H5, H6, H7, H8, H10, H12mm</span></p>
+<div class="price">₡20.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Sacatacos 10 Pzs" src="IMG VIKTEC/VT13155.jpg"/>
+<div class="meta"><b>VT13155</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Sacatacos 10 Pzs</h3>
+<p class="specs spec-lines-3"><span>Espiga: 3/8"</span><span>Medidas: 10, 11, 12, 13, 14, 15, 16, 17, 19mm</span><span>Barra de 8mm</span></p>
+<div class="price">₡27.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Juego de Sacatacos 10 Pzs" src="IMG VIKTEC/VT13254A.jpg"/>
+<div class="meta"><b>VT13254A</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Juego de Sacatacos 10 Pzs</h3>
+<p class="specs spec-lines-3"><span>Espiga: 3/8"</span><span>Medidas: 1/8", 5/32", 3/16", 7/32", 1/4", 9/32", 5/16", 11/32", 3/8", 13/32"</span><span>Barra de 8mm</span></p>
+<div class="price">₡10.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Reparación de Roscas M5 x 0.8mm" src="IMG VIKTEC/VT01073A.jpg"/>
+<div class="meta"><b>VT01073A</b><em>Roscas y reparación</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Reparación de Roscas M5 x 0.8mm</h3>
+<p class="specs spec-lines-1"><span>Roscas: M5 x 0.8 mm</span></p>
+<div class="price">₡6.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Reparación de Roscas M6 x 1.0mm" src="IMG VIKTEC/VT01073B.jpg"/>
+<div class="meta"><b>VT01073B</b><em>Roscas y reparación</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Reparación de Roscas M6 x 1.0mm</h3>
+<p class="specs spec-lines-1"><span>Roscas: M6 x 1.0 mm</span></p>
+<div class="price">₡7.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Reparación de Roscas M8 x 1.25mm" src="IMG VIKTEC/VT01073C.jpg"/>
+<div class="meta"><b>VT01073C</b><em>Roscas y reparación</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Reparación de Roscas M8 x 1.25mm</h3>
+<p class="specs spec-lines-1"><span>Roscas: M8 x 1.25 mm</span></p>
+<div class="price">₡8.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Reparación de Roscas M10 x 1.5mm" src="IMG VIKTEC/VT01074C.jpg"/>
+<div class="meta"><b>VT01074C</b><em>Roscas y reparación</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Reparación de Roscas M10 x 1.5mm</h3>
+<p class="specs spec-lines-1"><span>Roscas: M10 x 1.5 mm</span></p>
+<div class="price">₡7.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Reparación de Roscas M12 x 1.75mm" src="IMG VIKTEC/VT01074F.jpg"/>
+<div class="meta"><b>VT01074F</b><em>Roscas y reparación</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Reparación de Roscas M12 x 1.75mm</h3>
+<p class="specs spec-lines-1"><span>Roscas: M12 x 1.75 mm</span></p>
+<div class="price">₡12.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Reparación de Roscas M14 x 1.5mm" src="IMG VIKTEC/VT01074l.jpg"/>
+<div class="meta"><b>VT01074l</b><em>Roscas y reparación</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Reparación de Roscas M14 x 1.5mm</h3>
+<p class="specs spec-lines-1"><span>Roscas: M14 x 1.5 mm</span></p>
+<div class="price">₡15.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit de Servicio de Rótulas para Parte Frontal" src="IMG VIKTEC/VT01390.jpg"/>
+<div class="meta"><b>VT01390</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit de Servicio de Rótulas para Parte Frontal</h3>
+<p class="specs spec-lines-5"><span>Extractor de terminales de dirección</span><span>Separador de rótulas</span><span>Extractor de brazo Pitman</span><span>Extractor de rótulas y terminales</span><span>Extractor de rodamientos</span></p>
+<div class="price">₡45.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit para Mantenimiento de Frenos" src="IMG VIKTEC/VT13108.jpg"/>
+<div class="meta"><b>VT13108</b><em>Frenos</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit para Mantenimiento de Frenos</h3>
+<p class="specs spec-lines-2"><span>kit de servicio para frenos de disco y tambores</span><span>15 Pzs</span></p>
+<div class="price">₡44.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit Probador de Vacío y Purgador de Frenos" src="IMG VIKTEC/VT01046.jpg"/>
+<div class="meta"><b>VT01046</b><em>Frenos</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit Probador de Vacío y Purgador de Frenos</h3>
+<p class="specs spec-lines-3"><span>Reloj calibrado con doble escala en milímetros y pulgadas de mercurio</span><span>Mangueras: 2x580mm y 2x80mm</span><span>5 fittings y 3 adaptadores</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit Remover Sellos de Válvulas" src="IMG VIKTEC/VT01062.jpg"/>
+<div class="meta"><b>VT01062</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit Remover Sellos de Válvulas</h3>
+<p class="specs spec-lines-4"><span>Alicate para sellos de válvulas</span><span>Mango de 150mm</span><span>Cubos para instalación de sellos: 10.8-14.8mm</span><span>Adaptadores: 5, 5.5, 6, 6.5, 7, 8mm y 3/8"</span></p>
+<div class="price">₡19.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Kit Reparación Resortes de Válvula" src="IMG VIKTEC/VT01718.jpg"/>
+<div class="meta"><b>VT01718</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Kit Reparación Resortes de Válvula</h3>
+<p class="specs spec-lines-4"><span>Motores OHC y OHV</span><span>Motores de 8, 16 y 24 válvulas</span><span>Reemplazo de sellos de válvula</span><span>Compresión de resortes sin desmontar la culata</span></p>
+<div class="price">₡51.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Llave para Damper Honda" src="IMG VIKTEC/VT01976.jpg"/>
+<div class="meta"><b>VT01976</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Llave para Damper Honda</h3>
+<p class="specs spec-lines-3"><span>Polea damper de motores Honda y Acura</span><span>Cubo offset de 50mm</span><span>Para extracción e instalación del tornillo del cigüeñal</span></p>
+<div class="price">₡11.900</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Llave para Volantes de Hyundai/Kia" src="IMG VIKTEC/VT18005.jpg"/>
+<div class="meta"><b>VT18005</b><em>Llaves y palancas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Llave para Volantes de Hyundai/Kia</h3>
+<p class="specs spec-lines-3"><span>Bloqueo de volante de motor</span><span>Hyundai y Kia</span><span>Motores 1.0L a 2.7L gasolina y diésel</span></p>
+<div class="price">₡17.500</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Compresión Diesel" src="IMG VIKTEC/VT01050.jpg"/>
+<div class="meta"><b>VT01050</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Compresión Diesel</h3>
+<p class="specs spec-lines-4"><span>Manómetro PSI/BAR</span><span>Adaptadores M10x1.0, M10x1.25 y M22x1.5</span><span>Adaptadores para inyectores M20x1.5, M22x1.5, M24x1.5 y M24x2.0</span><span>Conexión rápida y válvula de purga</span></p>
+<div class="price">₡35.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Compresión Dual (Gasolina/Diesel)" src="IMG VIKTEC/VT01601.jpg"/>
+<div class="meta"><b>VT01601</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Compresión Dual (Gasolina/Diesel)</h3>
+<p class="specs spec-lines-4"><span>Manómetro: 600 PSI</span><span>Adaptadores para bujías: 10, 12, 14, 18mm</span><span>Adaptadores para inyectores: M20, M22, M24</span><span>Acoples rápidos rectos y angulares</span></p>
+<div class="price">₡55.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Compresión Gasolina 4 Pzs" src="IMG VIKTEC/VT01049.jpg"/>
+<div class="meta"><b>VT01049</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Compresión Gasolina 4 Pzs</h3>
+<p class="specs spec-lines-4"><span>Manómetro de 2-1/2"</span><span>Rango de medición: 0-300PSI</span><span>Manguera flexible de 330mm</span><span>Adaptadores roscados: 14 y 18mm</span></p>
+<div class="price">₡16.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Compresión Gasolina 9 Pzs" src="IMG VIKTEC/VT01053B.jpg"/>
+<div class="meta"><b>VT01053B</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Compresión Gasolina 9 Pzs</h3>
+<p class="specs spec-lines-4"><span>Manómetro: 300PSI, 20kg/cm²</span><span>Conectores recto y angular de 130mm</span><span>Extensión flexible de 400mm</span><span>Adaptadores: M8x1.5, M10x1.0, M12x1.25, M14x1.25</span></p>
+<div class="price">₡21.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Compresión Rápida Cilindros" src="IMG VIKTEC/VT01058.jpg"/>
+<div class="meta"><b>VT01058</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Compresión Rápida Cilindros</h3>
+<p class="specs spec-lines-3"><span>Rango de medición: 0-300PSI</span><span>Manguera flexible de 6"</span><span>Adaptadores: 14mm y 18mm</span></p>
+<div class="price">₡17.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Fugas de Radiador 14 Pzs" src="IMG VIKTEC/VT01064.jpg"/>
+<div class="meta"><b>VT01064</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Fugas de Radiador 14 Pzs</h3>
+<p class="specs spec-lines-4"><span>Bomba</span><span>Termómetro</span><span>8 tapas para radiador</span><span>4 adaptadores</span></p>
+<div class="price">₡61.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Fugas de Radiador 28 Pzs" src="IMG VIKTEC/VT01064C.jpg"/>
+<div class="meta"><b>VT01064C</b><em>Motor y válvulas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Fugas de Radiador 28 Pzs</h3>
+<p class="specs spec-lines-5"><span>Rango de prueba: 0-2.5bar/0-35PSI</span><span>20 tapas para radiador</span><span>Termómetro</span><span>Bomba</span><span>Adaptador universal</span></p>
+<div class="price">₡85.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Presión Aceite" src="IMG VIKTEC/VT01576.jpg"/>
+<div class="meta"><b>VT01576</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Presión Aceite</h3>
+<p class="specs spec-lines-4"><span>Manómetro de 56mm</span><span>Manguera de 890mm</span><span>9 adaptadores</span><span>Conectores rápidos recto y angular</span></p>
+<div class="price">₡25.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Presión Combustible TU-443" src="IMG VIKTEC/VT01056.jpg"/>
+<div class="meta"><b>VT01056</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Presión Combustible TU-443</h3>
+<p class="specs spec-lines-3"><span>Rango de medición: 0-10bar/0-140PSI</span><span>Manómetro con gancho</span><span>23 Pzs</span></p>
+<div class="price">₡57.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Presión Inyección Combustible" src="IMG VIKTEC/VT01328.jpg"/>
+<div class="meta"><b>VT01328</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Presión Inyección Combustible</h3>
+<p class="specs spec-lines-3"><span>Rango de medición: 0-10bar/0-140PSI</span><span>Manómetro de 90mm</span><span>20 pzs</span></p>
+<div class="price">₡28.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Medidor Presión Inyección Combustible" src="IMG VIKTEC/VT13730.jpg"/>
+<div class="meta"><b>VT13730</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Medidor Presión Inyección Combustible</h3>
+<p class="specs spec-lines-3"><span>Rango de medición: 0-7bar/0-100PSI</span><span>Manómetro con gancho</span><span>11 pzs</span></p>
+<div class="price">₡24.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt='Palanca Jumbo 36"' src="IMG VIKTEC/VT13051.jpg"/>
+<div class="meta"><b>VT13051</b><em>Llaves y palancas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Palanca Jumbo 36"</h3>
+<p class="specs spec-lines-1"><span>Longitud: 36" (915mm)</span></p>
+<div class="price">₡14.000</div>
+</article><article class="card brand-viktec has-promo" data-brand="viktec"><div class="promo-badge liquidacion">LIQUIDACIÓN</div>
+<img alt="Pistola para Atiempar 12V" src="IMG VIKTEC/VT19536.jpg"/>
+<div class="meta"><b>VT19536</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Pistola para Atiempar 12V</h3>
+<p class="specs spec-lines-1"><span>pistola estroboscópica 12V para ajuste/verificación de tiempo</span></p>
+<div class="price">₡12.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Puller con Martillo 15 Pzs" src="IMG VIKTEC/VT01006C.jpg"/>
+<div class="meta"><b>VT01006C</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Puller con Martillo 15 Pzs</h3>
+<p class="specs spec-lines-4"><span>Martillo deslizante de 5 lbs</span><span>Extractor de 2 y 3 patas</span><span>Uso interno/externo</span><span>Para rodamientos, engranajes, semiejes</span></p>
+<div class="price">₡45.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Recolector de Aceite 10L" src="IMG VIKTEC/VT01378B.jpg"/>
+<div class="meta"><b>VT01378B</b><em>Aceite y servicio</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Recolector de Aceite 10L</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 10 litros</span></p>
+<div class="price">₡13.500</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Recolector de Aceite 15L" src="IMG VIKTEC/VT01634.jpg"/>
+<div class="meta"><b>VT01634</b><em>Aceite y servicio</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Recolector de Aceite 15L</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 15 litros</span></p>
+<div class="price">₡12.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Recolector de Aceite 80L" src="IMG VIKTEC/VT05051C.jpg"/>
+<div class="meta"><b>VT05051C</b><em>Aceite y servicio</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Recolector de Aceite 80 Litros</h3>
+<p class="specs spec-lines-5"><span>Capacidad: 80 litros</span><span>Presión de trabajo: 114-145PSI</span><span>Altura máxima: 180mm</span><span>Diámetro de taza: 18"</span><span>Manguera: 76"</span></p>
+<div class="price">₡110.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Recolector Magnético Flexible" src="IMG VIKTEC/VT01204.jpg"/>
+<div class="meta"><b>VT01204</b><em>Aceite y servicio</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Recolector Magnético Flexible</h3>
+<p class="specs spec-lines-3"><span>Capacidad magnética: 1.6kg</span><span>Longitud: 600mm</span><span>Mango ergonómico</span></p>
+<div class="price">₡5.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Removedor de Clips, Paneles y Tableros" src="IMG VIKTEC/VT13895.jpg"/>
+<div class="meta"><b>VT13895</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Removedor de Clips, Paneles y Tableros</h3>
+<p class="specs spec-lines-4"><span>11 herramientas para desmontaje de molduras y paneles</span><span>2 extractores de clips Alicate para clips</span><span>Llaves para extracción de radios</span><span>3 extractores de terminales</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Removedor de Inyectores Hyundai/Kia" src="IMG VIKTEC/VT13989A.jpg"/>
+<div class="meta"><b>VT13989A</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Removedor de Inyectores Hyundai/Kia</h3>
+<p class="specs spec-lines-2"><span>Compatible con la mayoría de motores Hyundai/Kia</span><span>Motor diesel: 1.3, 1.6, 1.9, 2.0, 2.2</span></p>
+<div class="price">₡59.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Set de Desatornilladores Impacto 12 Pzs" src="IMG VIKTEC/VT07045.jpg"/>
+<div class="meta"><b>VT07045</b><em>Herramientas automotrices</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Set de Desatornilladores Impacto 12 Pzs</h3>
+<p class="specs spec-lines-2"><span>Phillips: 38, 75, 150, 200mm</span><span>Planos: 38, 75x3.2, 75x5, 100, 200mm</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Set de Llaves para Filtros Aceite 15 Pzs" src="IMG VIKTEC/VT01037.jpg"/>
+<div class="meta"><b>VT01037</b><em>Llaves y palancas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Set de Llaves para Filtros Aceite 15 Pzs</h3>
+<p class="specs spec-lines-3"><span>Copas: 65, 65-67, 68, 73, 74-76, 75-77, 76, 80, 80-82, 90, 93, 100mm</span><span>Estrías: 14, 15, 30, 36</span><span>Adaptador 3/8" macho a 1/2" hembra</span></p>
+<div class="price">₡19.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Set de Palancas 4 Pzs" src="IMG VIKTEC/VT01659.jpg"/>
+<div class="meta"><b>VT01659</b><em>Llaves y palancas</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Set de Palancas 4 Pzs</h3>
+<p class="specs spec-lines-2"><span>Tamaños: 210, 300, 440, 580mm</span><span>Mango ergonómico</span></p>
+<div class="price">₡18.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Set para Remover Rótulas de Dirección" src="IMG VIKTEC/VT01719.jpg"/>
+<div class="meta"><b>VT01719</b><em>Extractores y separadores</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Set para Remover Rótulas de Dirección</h3>
+<p class="specs spec-lines-2"><span>Capacidad máxima de 125mm</span><span>Uñas de 20, 22, 24, 27, 30mm</span></p>
+<div class="price">₡47.000</div>
+</article><article class="card brand-viktec" data-brand="viktec">
+<img alt="Vacuómetro" src="IMG VIKTEC/VT01194B.jpg"/>
+<div class="meta"><b>VT01194B</b><em>Medición y diagnóstico</em><span class="brand-label viktec">VIKTEC</span></div>
+<h3>Vacuómetro</h3>
+<p class="specs spec-lines-2"><span>Rango de presión: 0-1/bar/014PSI</span><span>Adaptadores: 14mm y 18mm</span></p>
+<div class="price">₡15.000</div>
+</article></main></section><script>
+const q = document.getElementById('q');
+const buttons = document.querySelectorAll('.brand-tabs button');
+const brandCards = document.querySelectorAll('.big-brand');
+const cards = document.querySelectorAll('article.card');
+const counter = document.getElementById('counter');
+const landing = document.getElementById('landing');
+const catalogSection = document.getElementById('catalog-section');
+const backHome = document.getElementById('backHome');
+
+let activeBrand = 'all';
+
+function normalizeText(value){
+    return (value || '')
+        .toString()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/["“”'’´`]/g, '')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+cards.forEach(card => {
+    card.dataset.search = normalizeText(card.innerText);
+});
+
+function applyFilters(){
+    const text = normalizeText(q ? q.value : '');
+    let visible = 0;
+
+    cards.forEach(card => {
+        const brand = (card.dataset.brand || '').toLowerCase().trim();
+        const cardText = card.dataset.search || normalizeText(card.innerText);
+        const matchesBrand = activeBrand === 'all' || brand === activeBrand;
+        const matchesText = !text || cardText.includes(text);
+        const show = matchesBrand && matchesText;
+
+        card.classList.toggle('hidden', !show);
+        card.style.display = show ? '' : 'none';
+        if(show) visible++;
+    });
+
+    if(counter){
+        counter.textContent = visible + ' productos visibles';
+    }
+}
+
+function setActiveButton(brand){
+    buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.brand === brand);
+    });
+}
+
+function openCatalog(brand){
+    activeBrand = (brand || 'all').toLowerCase().trim();
+    if(landing) landing.classList.add('hidden-section');
+    if(catalogSection) catalogSection.classList.remove('hidden-section');
+    setActiveButton(activeBrand);
+    if(q) q.value = '';
+    applyFilters();
+    window.scrollTo({top:0, behavior:'smooth'});
+}
+
+brandCards.forEach(card => card.addEventListener('click', () => openCatalog(card.dataset.openBrand)));
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        activeBrand = (btn.dataset.brand || 'all').toLowerCase().trim();
+        setActiveButton(activeBrand);
+        applyFilters();
+    });
+});
+
+if(backHome){
+    backHome.addEventListener('click', () => {
+        if(catalogSection) catalogSection.classList.add('hidden-section');
+        if(landing) landing.classList.remove('hidden-section');
+        if(q) q.value = '';
+        activeBrand = 'all';
+        setActiveButton('all');
+        applyFilters();
+        window.scrollTo({top:0, behavior:'smooth'});
+    });
+}
+
+if(q) q.addEventListener('input', applyFilters);
+applyFilters();
+</script>
+<div class="product-modal hidden" id="productModal">
+<div class="product-modal-backdrop" id="modalBackdrop"></div>
+<div class="product-modal-box">
+<button class="product-modal-close" id="modalClose">×</button>
+<div id="modalContent"></div>
+</div>
+</div>
+<script>
+const productModal = document.getElementById('productModal');
+const modalContent = document.getElementById('modalContent');
+const modalClose = document.getElementById('modalClose');
+const modalBackdrop = document.getElementById('modalBackdrop');
+
+function openProductModal(card){
+    if(!productModal || !modalContent) return;
+    const clone = card.cloneNode(true);
+    clone.classList.remove('hidden');
+    clone.style.display = '';
+    modalContent.innerHTML = '';
+    modalContent.appendChild(clone);
+    productModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProductModal(){
+    if(!productModal) return;
+    productModal.classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('article.card').forEach(card => {
+    card.addEventListener('click', () => openProductModal(card));
+});
+
+if(modalClose) modalClose.addEventListener('click', closeProductModal);
+if(modalBackdrop) modalBackdrop.addEventListener('click', closeProductModal);
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closeProductModal();
+});
+</script></body>
+</html>
