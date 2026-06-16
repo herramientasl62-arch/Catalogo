@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Catálogo Maquinaria León</title>
-<link rel="icon" type="image/png" href="favicon_maquinaria_leon.png">
+<link href="favicon_maquinaria_leon.png" rel="icon" type="image/png"/>
 <style>
 :root {
     --ml-blue:#153B66;
@@ -902,6 +902,90 @@ header h1 .yellow-title{
         font-size:13px !important;
     }
 }
+
+/* ===== FERRAWYY ===== */
+:root{
+    --ferrawyy-blue:#2E6F95;
+    --ferrawyy-gray:#4A5568;
+    --ferrawyy-light:#D9E6EF;
+}
+.brand-label.ferrawyy{
+    background:var(--ferrawyy-blue) !important;
+}
+.brand-ferrawyy .meta b{
+    background:var(--ferrawyy-blue) !important;
+    color:white !important;
+}
+.brand-ferrawyy .meta em{
+    background:var(--ferrawyy-gray) !important;
+    color:white !important;
+}
+.brand-ferrawyy h3{
+    color:var(--ferrawyy-blue) !important;
+}
+.brand-ferrawyy .price{
+    background:var(--ferrawyy-gray) !important;
+    color:white !important;
+}
+.big-brand.ferrawyy-card{
+    border-top:10px solid var(--ferrawyy-blue) !important;
+}
+.big-brand.ferrawyy-card h2{
+    color:var(--ferrawyy-blue) !important;
+}
+.big-brand.ferrawyy-card .open{
+    background:var(--ferrawyy-blue) !important;
+    box-shadow:inset 0 -5px 0 var(--ferrawyy-gray) !important;
+}
+.brand-tabs button[data-brand="ferrawyy"].active{
+    background:var(--ferrawyy-blue) !important;
+    color:white !important;
+    box-shadow:inset 0 -4px 0 var(--ferrawyy-gray) !important;
+}
+
+
+/* ===== FERTON ===== */
+:root{
+    --ferton-yellow:#F7C600;
+    --ferton-black:#323030;
+    --ferton-gray:#3A3A3A;
+}
+.brand-label.ferton{
+    background:var(--ferton-yellow) !important;
+    color:#111 !important;
+}
+.brand-ferton .meta b{
+    background:var(--ferton-yellow) !important;
+    color:#111 !important;
+}
+.brand-ferton .meta em{
+    background:var(--ferton-black) !important;
+    color:white !important;
+}
+.brand-ferton h3{
+    color:var(--ferton-black) !important;
+}
+.brand-ferton .price{
+    background:var(--ferton-black) !important;
+    color:var(--ferton-yellow) !important;
+}
+.big-brand.ferton-card{
+    border-top:10px solid var(--ferton-yellow) !important;
+}
+.big-brand.ferton-card h2{
+    color:var(--ferton-yellow) !important;
+    text-shadow:0 1px 0 rgba(0,0,0,.15);
+}
+.big-brand.ferton-card .open{
+    background:var(--ferton-black) !important;
+    color:white !important;
+    box-shadow:inset 0 -5px 0 var(--ferton-yellow) !important;
+}
+.brand-tabs button[data-brand="ferton"].active{
+    background:var(--ferton-black) !important;
+    color:white !important;
+    box-shadow:inset 0 -4px 0 var(--ferton-yellow) !important;
+}
 </style>
 </head>
 <body>
@@ -927,6 +1011,17 @@ header h1 .yellow-title{
 <p>Herramientas neumáticas, llaves de impacto, mototools y cubos de impacto para trabajos de alto torque.</p>
 <span class="open">Abrir catálogo ROTAKE</span>
 </button>
+<button class="big-brand ferrawyy-card" data-open-brand="ferrawyy">
+<h2>FERRAWYY</h2>
+<p>Herramientas manuales, equipos de taller, carga, remolque, construcción y jardinería.</p>
+<span class="open">Abrir catálogo FERRAWYY</span>
+</button>
+
+<button class="big-brand ferton-card" data-open-brand="ferton">
+<h2>FERTON</h2>
+<p>Herramientas profesionales, equipos hidráulicos, llaves de impacto, prensas y accesorios para taller.</p>
+<span class="open">Abrir catálogo FERTON</span>
+</button>
 </div>
 </section>
 <section class="catalog-section hidden-section" id="catalog-section"><div class="notice notice-sticky-top">
@@ -946,7 +1041,7 @@ header h1 .yellow-title{
 <button class="active" data-brand="all">Todas</button>
 <button data-brand="viktec">VIKTEC</button>
 <button data-brand="epont">EPONT</button>
-<button data-brand="rotake">ROTAKE</button></div>
+<button data-brand="rotake">ROTAKE</button><button data-brand="ferrawyy">FERRAWYY</button><button data-brand="ferton">FERTON</button></div>
 <input id="q" placeholder="Buscar por código, nombre, categoría o marca..."/>
 <div class="counter" id="counter"></div>
 </div><main class="grid" id="grid"><article class="card brand-epont" data-brand="epont">
@@ -1061,85 +1156,85 @@ header h1 .yellow-title{
 <img alt='Cubo de Impacto 1/2" 12mm' src="IMG ROTAKE/RT-012K.jpg"/>
 <div class="meta"><b>RT-012K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Cubo de Impacto 1/2" 12mm</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span>Medida: 12mm</span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 1/2"</span><span>Medida: 12mm</span><span>Largo: 8cm</span></p>
 <div class="price">₡2.500</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Cubo de Impacto 1/2" 14 mm' src="IMG ROTAKE/RT-014K.jpg"/>
 <div class="meta"><b>RT-014K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Cubo de Impacto 1/2" 14mm</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span></span>Medida: 14mm</span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 1/2"</span><span></span>Medida: 14mm<span>Largo: 8cm</span></p>
 <div class="price">₡2.500</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Cubo de Impacto 1/2" 19 mm' src="IMG ROTAKE/RT-019K.jpg"/>
 <div class="meta"><b>RT-019K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Cubo de Impacto 1/2" 19mm</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span>Medida: 19mm</span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 1/2"</span><span>Medida: 19mm</span><span>Largo: 8cm</span></p>
 <div class="price">₡2.500</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Cubo de Impacto 1/2" 21 mm' src="IMG ROTAKE/RT-021K.jpg"/>
 <div class="meta"><b>RT-021K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Cubo de Impacto 1/2" 21mm</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 1/2"</span><span></span>Medida: 21mm</span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 1/2"</span><span></span>Medida: 21mm<span>Largo: 8cm</span></p>
 <div class="price">₡2.500</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 1"' src="IMG ROTAKE/RT-002K.jpg"/>
 <div class="meta"><b>RT-002K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Juego de Cubos de Impacto 1"</h3>
-<p class="specs spec-lines-5"><span>Cuadro: 1"</span><span>Medidas: 21, 22, 24, 27, 32, 33, 38, 41mm </span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-5"><span>Espiga: 1"</span><span>Medidas: 21, 22, 24, 27, 32, 33, 38, 41mm </span><span>Largo: 8cm</span></p>
 <div class="price">₡39.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 1/2"' src="IMG ROTAKE/RT-013K.jpg"/>
 <div class="meta"><b>RT-013K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Juego de Cubos de Impacto 1/2"</h3>
-<p class="specs spec-lines-5"><span>Cuadro: 1/2"</span><span>Medidas: 10, 12, 14, 15, 17, 19, 21, 22, 24, 27, 30, 32mm </span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-5"><span>Espiga: 1/2"</span><span>Medidas: 10, 12, 14, 15, 17, 19, 21, 22, 24, 27, 30, 32mm </span><span>Largo: 8cm</span></p>
 <div class="price">₡28.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 3/4"' src="IMG ROTAKE/RT-001K.jpg"/>
 <div class="meta"><b>RT-001K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Juego de Cubos de Impacto 3/4"</h3>
-<p class="specs spec-lines-5"><span>Cuadro: 3/4"</span><span>Medidas: 17, 19, 22, 24, 27, 32, 36, 38mm </span><span>Largo: 8cm</span></p>
+<p class="specs spec-lines-5"><span>Espiga: 3/4"</span><span>Medidas: 17, 19, 22, 24, 27, 32, 36, 38mm </span><span>Largo: 8cm</span></p>
 <div class="price">₡35.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 3/4" 21 Pzs' src="IMG ROTAKE/RT-040K.jpg"/>
 <div class="meta"><b>RT-040K</b><em>Cubos de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Juego de Cubos de Impacto 3/4" 21 Pzs</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 3/4"<span></span>Medidas: 17-50mm<span></span>Incluye: extensiones de 5" y 10"<span></span>Maneral de 18"<span></span>Largo de cubo: 8cm</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 3/4"<span></span>Medidas: 17-50mm<span></span>Incluye: extensiones de 5" y 10"<span></span>Maneral de 18"<span></span>Largo de cubo: 8cm</span></p>
 <div class="price">₡89.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 1" Corta' src="IMG ROTAKE/RT-5568.jpg"/>
 <div class="meta"><b>RT-5568</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Llave de Impacto 1" Corta</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 1" Torque máximo: 1330 ft.lbs<span></span>Consumo: 12 CFM<span></span>Velocidad: 4000 RPM</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 1" Torque máximo: 1330 ft.lbs<span></span>Consumo: 12 CFM<span></span>Velocidad: 4000 RPM</span></p>
 <div class="price">₡121.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 1" Larga' src="IMG ROTAKE/RT-5665K.jpg"/>
 <div class="meta"><b>RT-5665K</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Llave de Impacto 1" Larga</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 1" Torque máximo: 1696 ft.lbs<span></span>Consumo: 23 CFM<span></span>Velocidad: 4000RPM</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 1" Torque máximo: 1696 ft.lbs<span></span>Consumo: 23 CFM<span></span>Velocidad: 4000RPM</span></p>
 <div class="price">₡150.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 1/2"' src="IMG ROTAKE/RT-5270K.jpg"/>
 <div class="meta"><b>RT-5270K</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Llave de Impacto 1/2"</h3>
-<p class="specs spec-lines-5"><span>Cuadro: 1/2"<span></span>Torque máximo: 530 ft.lbs<span></span>Cubos: 9, 10, 11, 13, 14, 17, 19, 22mm<span></span>Incluye: extensión de 5"</span></p>
+<p class="specs spec-lines-5"><span>Espiga: 1/2"<span></span>Torque máximo: 530 ft.lbs<span></span>Cubos: 9, 10, 11, 13, 14, 17, 19, 22mm<span></span>Incluye: extensión de 5"</span></p>
 <div class="price">₡55.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 3/4"' src="IMG ROTAKE/RT-5567.jpg"/>
 <div class="meta"><b>RT-5567</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Llave de Impacto 3/4"</h3>
-<p class="specs spec-lines-1"><span>Cuadro: 3/4" Torque máximo: 1330 ft.lbs<span></span>Consumo: 12 CFM<span></span>Velocidad: 4000RPM</span></p>
+<p class="specs spec-lines-1"><span>Espiga: 3/4" Torque máximo: 1330 ft.lbs<span></span>Consumo: 12 CFM<span></span>Velocidad: 4000RPM</span></p>
 <div class="price">₡139.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 18V 1/2"' src="IMG ROTAKE/RT-8811.jpg"/>
 <div class="meta"><b>RT-8811</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Llave de Impacto 18V 1/2"</h3>
-<p class="specs spec-lines-2"><span>Cuadro: 1/2"<span></span>Voltaje: 18V<span></span>Torque máximo: 680Nm/500 ft.lbs<span></span>Velocidad: 2700/2200/1700RPM<span></span>Incluye: 2 baterías 4.0Ah</span><span>cargador y estuche</span></p>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"<span></span>Voltaje: 18V<span></span>Torque máximo: 680Nm/500 ft.lbs<span></span>Velocidad: 2700/2200/1700RPM<span></span>Incluye: 2 baterías 4.0Ah</span><span>cargador y estuche</span></p>
 <div class="price">₡115.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 18V 3/4"' src="IMG ROTAKE/RT-8813B.jpg"/>
 <div class="meta"><b>RT-8813B</b><em>Llaves de impacto</em><span class="brand-label rotake">ROTAKE</span></div>
 <h3>Llave de Impacto 18V 3/4"</h3>
-<p class="specs spec-lines-2"><span>Cuadro: 3/4"<span></span>Voltaje: 18V<span></span>Torque máximo: 1980Nm/1450 ft.lbs<span></span>Velocidad: 1800/1500/1000RPM<span></span>Incluye: 2 baterías 4.0Ah</span><span>cargador y estuche</span></p>
+<p class="specs spec-lines-2"><span>Espiga: 3/4"<span></span>Voltaje: 18V<span></span>Torque máximo: 1980Nm/1450 ft.lbs<span></span>Velocidad: 1800/1500/1000RPM<span></span>Incluye: 2 baterías 4.0Ah</span><span>cargador y estuche</span></p>
 <div class="price">₡219.000</div>
 </article><article class="card brand-rotake" data-brand="rotake">
 <img "="" alt="Mototool Neumático 1/4\" src="IMG ROTAKE/RT-1108.jpg"/>
@@ -1788,7 +1883,372 @@ header h1 .yellow-title{
 <h3>Vacuómetro</h3>
 <p class="specs spec-lines-2"><span>Rango de presión: 0-1/bar/014PSI</span><span>Adaptadores: 14mm y 18mm</span></p>
 <div class="price">₡15.000</div>
-</article></main></section><script>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img "="" alt="Camilla Plástica para Mecánico" src="IMG FERRAWYY/PLP40YT.jpg"/>
+<div class="meta"><b>PLP40YT</b><em>Camillas y carritos</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Camilla Plástica para Mecánico</h3>
+<p class="specs spec-lines-1"><span>Largo: 40 pulgadas</span><span>Capacidad: 115kg</span></p>
+<div class="price">₡23.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Carrito para Herramientas 3 Niveles" src="IMG FERRAWYY/CZH91YT.jpg"/>
+<div class="meta"><b>CZH91YT</b><em>Almacenamiento</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Carrito para Herramientas 3 Niveles</h3>
+<p class="specs spec-lines-1"><span>3 niveles</span><span>Medidas: 77cm x 77cm x 36cm</span><span>Metálico</span></p>
+<div class="price">₡29.000</div>
+</article>
+<article class="card brand-ferrawyy has-promo" data-brand="ferrawyy">
+<div class="promo-badge oferta">OFERTA</div>
+<img alt="Gata Hidráulica 3 TON Perfil Bajo" src="IMG FERRAWYY/GTZ103.jpg"/>
+<div class="meta"><b>GTZ103</b><em>Gatas hidráulicas</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Gata Hidráulica 3 TON Perfil Bajo</h3>
+<p class="specs spec-lines-2"><span>Perfil bajo</span><span>Altura mínima: 75mm</span><span>Altura máxima: 500mm</span><span>Bomba rápida de doble pistón</span></p>
+<div class="price">₡81.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Gata Hidráulica 5 TON Perfil Bajo" src="IMG FERRAWYY/GTZ105.jpg"/>
+<div class="promo-badge oferta">OFERTA</div>
+<div class="meta"><b>GTZ105</b><em>Gatas hidráulicas</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Gata Hidráulica 5 TON Perfil Bajo</h3>
+<p class="specs spec-lines-2"><span>Perfil bajo</span><span>Altura mínima: 90mm</span><span>Altura máxima: 550mm</span><span>Bomba rápida de doble pistón</span></p>
+<div class="price">₡135.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img 12="" alt="Juego de Cubos 1/2" pzs"="" src="IMG FERRAWYY/DAD12W.jpg"/>
+<div class="meta"><b>DAD12W</b><em>Cubos</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Cubos 1/2" 12 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Cubos: 9, 10, 11, 12, 13, 14, 16, 17, 19, 21mm</span><span>Extensión: 5"</span><span>Ratchet</span></p>
+<div class="price">₡12.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img 27="" alt="Juego de Cubos 1/2" pzs"="" src="IMG FERRAWYY/DAD27W.jpg"/>
+<div class="meta"><b>DAD27W</b><em>Cubos</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Cubos 1/2" 27 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Cubos: 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 20, 21, 22, 23, 24, 27, 30, 32mm</span><span>Extensiones: 5" y 6"</span><span>Ratchet y maneral</span></p>
+<div class="price">₡27.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img 1="" 108="" 2"="" alt="Juego de Cubos 1/4" pzs"="" src="IMG FERRAWYY/DAD108W.jpg" y=""/>
+<div class="meta"><b>DAD108W</b><em>Cubos</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Cubos 1/4" y 1/2" 108 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/4" y 1/2"</span><span>Cubos 1/4": 4mm-14mm</span><span>Cubos 1/2": 10mm-32mm</span></p>
+<div class="price">₡41.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img ,="" 1="" 2"="" 216="" 4"="" alt="Juego de Cubos 3/8" pzs"="" src="IMG FERRAWYY/DAD216W.jpg" y=""/>
+<div class="meta"><b>DAD216W</b><em>Cubos</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Cubos 3/8", 1/4" y 1/2" 216 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 3/8", 1/4" y 1/2"</span><span>Cubos 1/4": 4mm-14mm</span><span>Cubos 3/8": 10mm-19mm</span><span>Cubos 1/2": 13mm-32mm</span></p>
+<div class="price">₡65.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Juego de Llaves 12 Pzs" src="IMG FERRAWYY/YOS612.jpg"/>
+<div class="meta"><b>YOS612</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Llaves 12 Pzs</h3>
+<p class="specs spec-lines-1"><span>Medidas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 19, 22mm</span></p>
+<div class="price">₡15.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Juego de Llaves Combinadas 25 Pzs" src="IMG FERRAWYY/YOS625.jpg"/>
+<div class="meta"><b>YOS625</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Llaves Combinadas 25 Pzs</h3>
+<p class="specs spec-lines-1"><span>Medidas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 32mm</span></p>
+<div class="price">₡30.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Juego de Llaves Combinadas en Pulgadas 6 Pzs" src="IMG FERRAWYY/YOS206.jpg"/>
+<div class="meta"><b>YOS206</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Llaves Combinadas en Pulgadas 6 Pzs</h3>
+<p class="specs spec-lines-2"><span>Medidas: 5/8", 9/16", 1/2", 7/16", 3/8", 5/16"</span></p>
+<div class="price">₡4.500</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Juego de Llaves Corofija Doble" src="IMG FERRAWYY/YRS803.jpg"/>
+<div class="meta"><b>YRS803</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Llaves Corofija Doble</h3>
+<p class="specs spec-lines-1"><span>Medidas: 6x7, 8x9, 10x9, 10x13, 12x13, 14x15, 16x17, 18x19mm</span></p>
+<div class="price">₡12.500</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Juego de Llaves en Pulgadas 14 Pzs" src="IMG FERRAWYY/YOS814.jpg"/>
+<div class="meta"><b>YOS814</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Llaves en Pulgadas 14 Pzs</h3>
+<p class="specs spec-lines-2"><span>14 piezas</span><span>Medidas: 1/4", 5/16", 3/8", 7/16", 1/2", 9/16", 5/8", 11/16", 3/4", 13/16", 7/8", 15/16", 1", 1 1/4"</span></p>
+<div class="price">₡16.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Juego de Llaves Ratchet Dobles" src="IMG FERRAWYY/YRH5YT.jpg"/>
+<div class="meta"><b>YRH5YT</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Juego de Llaves Ratchet Dobles</h3>
+<p class="specs spec-lines-1"><span>Medidas: 6x8, 10x12, 11x13, 14x17, 19x21mm</span></p>
+<div class="price">₡10.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Llave Abocinada 3 Pzs" src="IMG FERRAWYY/YA301M.jpg"/>
+<div class="meta"><b>YA301M</b><em>Llaves</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Llave Abocinada 3 Pzs</h3>
+<p class="specs spec-lines-2"><span>Medidas: 10x11, 12x13, 14x17mm</span></p>
+<div class="price">₡13.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Mezcladora de Concreto 200 Litros" src="IMG FERRAWYY/BTE200-PA.jpg"/>
+<div class="meta"><b>BTE200-PA</b><em>Construcción</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Mezcladora de Concreto 200 Litros</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 200 litros</span><span>Carga Máxima: 120kg (Equivalente a 1/2 bulto de cemento)</span><span>Motor: 850W (1.1HP)</span><span>Voltaje: 110V/220V</span></p>
+<div class="price">₡229.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Mezcladora de Concreto 260 Litros" src="IMG FERRAWYY/BTE260-PA.jpg"/>
+<div class="meta"><b>BTE260-PA</b><em>Construcción</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Mezcladora de Concreto 260 Litros</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 260 litros</span><span>Carga Máxima: 150kg (Equivalente a 1 bulto de cemento)</span><span>Motor:  1100 W (1.5 HP)</span><span>Voltaje: 110V/220V</span></p>
+<div class="price">₡259.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Pata con Rueda para Carreta 1000 lbs" src="IMG FERRAWYY/PTRM1YX.jpg"/>
+<div class="meta"><b>PTRM1YX</b><em>Carga y remolque</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Pata con Rueda para Carreta 1000 lbs</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 1000 lbs</span><span>Con rueda</span><span>Recorrido: 10 pulgadas (25.4cm)</span><span>Altura retraída: 22 pulgadas (55.8cm)</span><span>Altura extendida: 32 pulgadas (81.2cm)</span></p>
+<div class="price">₡31.900</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Pata Fija para Carreta 2000 lbs" src="IMG FERRAWYY/PTFG2YX.jpg"/>
+<div class="meta"><b>PTFG2YX</b><em>Carga y remolque</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Pata Fija para Carreta 2000 lbs</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 2000 lbs</span><span>Pata fija (Tipo ronda)</span><span>Recorrido: 10 pulgadas (25.4cm)</span><span>Altura retraída: 11 pulgadas (28cm)</span><span>Altura extendida: 21 pulgadas (53.3cm)</span></p>
+<div class="price">₡33.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Pata Ajustable para Carreta 2000 lbs" src="IMG FERRAWYY/PTAA2YT.jpg"/>
+<div class="meta"><b>PTAA2YT</b><em>Carga y remolque</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Pata Ajustable para Carreta 2000 lbs</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 2000 lbs</span><span>Pata Ajustable</span><span>Recorrido: 14 pulgadas (35.5cm)</span><span>Altura retraída: 10 pulgadas (25.4cm)</span><span>Altura extendida: 24 pulgadas (60.9cm)</span></p>
+<div class="price">₡19.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Perra de Carga Reforzada 200 kg" src="IMG FERRAWYY/CZA001.jpg"/>
+<div class="meta"><b>CZA001</b><em>Carga y transporte</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Perra de Carga Reforzada 200 kg</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 200kg</span><span>Medidas: 132x40x66cm</span><span>Presión de ruedas: 20-30PSI</span></p>
+<div class="price">₡49.000</div>
+</article>
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
+<img alt="Pluma Hidráulica 2 Toneladas" src="IMG FERRAWYY/GAM2YT.jpg"/>
+<div class="meta"><b>GAM2YT</b><em>Equipos de taller</em><span class="brand-label ferrawyy">FERRAWYY</span></div>
+<h3>Pluma Hidráulica 2 Toneladas</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 2 toneladas</span><span>Altura máxima: 2 metros</span><span>Patas plegables</span></p>
+<div class="price">₡159.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Caja de Herramientas Acordeón" src="IMG FERTON/CJH92F.jpg"/>
+<div class="meta"><b>CJH92F</b><em>Almacenamiento</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Caja de Herramientas Acordeón</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 3 niveles</span><span>Dimensiones: 53cm x 21cm x 20cm</span><span>Material: Metal</span></p>
+<div class="price">₡21.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Caja para Herramientas 7 Compartimientos" src="IMG FERTON/CJH93F.jpg"/>
+<div class="meta"><b>CJH93F</b><em>Almacenamiento</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Caja para Herramientas 7 Compartimientos</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 7 compartimientos</span><span>Dimensiones: 60cm x 34cm x 26cm</span><span>Material: Metal</span></p>
+<div class="price">₡75.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 19mm Cuadrado" src="IMG FERTON/DAA919C.jpg"/>
+<div class="meta"><b>DAA919C</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 19mm Cuadrado</h3>
+<p class="specs spec-lines-2"><span>Medida: 19mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡8.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 21mm Cuadrado" src="IMG FERTON/DAA921C.jpg"/>
+<div class="meta"><b>DAA921C</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 21mm Cuadrado</h3>
+<p class="specs spec-lines-2"><span>Medida: 21mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡8.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 24mm" src="IMG FERTON/DAA924.jpg"/>
+<div class="meta"><b>DAA924</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 24mm</h3>
+<p class="specs spec-lines-2"><span>Medida: 24mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡6.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 27mm" src="IMG FERTON/DAA927.jpg"/>
+<div class="meta"><b>DAA927</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 27mm</h3>
+<p class="specs spec-lines-2"><span>Medida: 27mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡8.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 33mm" src="IMG FERTON/DAA933.jpg"/>
+<div class="meta"><b>DAA933</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 33mm</h3>
+<p class="specs spec-lines-2"><span>Medida: 33mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡9.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 36mm" src="IMG FERTON/DAA936.jpg"/>
+<div class="meta"><b>DAA936</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 36mm</h3>
+<p class="specs spec-lines-2"><span>Medida: 36mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡8.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 38mm" src="IMG FERTON/DAA938.jpg"/>
+<div class="meta"><b>DAA938</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 38mm</h3>
+<p class="specs spec-lines-2"><span>Medida: 38mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡10.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Cubo de Impacto 41mm" src="IMG FERTON/DAA941.jpg"/>
+<div class="meta"><b>DAA941</b><em>Cubos de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Cubo de Impacto 41mm</h3>
+<p class="specs spec-lines-2"><span>Medida: 41mm</span><span>Espiga: 1"</span><span>Alto: 8cm</span></p>
+<div class="price">₡10.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Elevador para Motocicleta" src="IMG FERTON/ELM8F.jpg"/>
+<div class="meta"><b>ELM8F</b><em>Equipos de taller</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Elevador para Motocicleta</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 1000 lbs</span><span>Hidráulico y neumático</span><span>Presión de trabajo: 110-120PSI</span><span>Altura mínima: 210mm</span><span>Altura máxima: 780mm</span><span>Largo: 2.2 metros</span></p>
+<div class="price">₡375.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Gabinete para Herramientas 7 Gavetas" src="IMG FERTON/CJH94F.jpg"/>
+<div class="meta"><b>CJH94F</b><em>Almacenamiento</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Gabinete para Herramientas 7 Gavetas</h3>
+<p class="specs spec-lines-1"><span>7 gavetas</span><span>Dimensiones: 1m x 47cm x 67cm</span><span>Material: Metal</span></p>
+<div class="price">₡279.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Gata para Cajas 1 Tonelada" src="IMG FERTON/GAF001.jpg"/>
+<div class="meta"><b>GAF001</b><em>Gatas para transmisión</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Gata para Cajas 1 Tonelada</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 1 tonelada</span><span>Altura mínima: 210 mm</span><span>Altura máxima: 780 mm</span><span>Recorrido neto de levante: 570mm</span></p>
+<div class="price">₡210.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Kit Mototool Neumático 15 Pzs" src="IMG FERTON/MTN015.jpg"/>
+<div class="meta"><b>MTN015</b><em>Herramientas neumáticas</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Kit Mototool Neumático 15 Pzs</h3>
+<p class="specs spec-lines-1"><span>Velocidad máxima: 22,000RPM</span><span>Presión de trabajo: 90 PSI (6.2 bar)</span><span>Consumo de aire promedio: 6 CFM</span><span>Entrada de aire: 1/4" NPT</span><span>Capacidad de boquilla: 1/4" y 1/8"</span></p>
+<div class="price">₡17.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Llave de Impacto 1" corta"="" src="IMG FERTON/PSN001.jpg"/>
+<div class="meta"><b>PSN001</b><em>Llaves de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Llave de Impacto 1" Corta</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1"</span><span>Torque máximo: 1,600 N.m (1,180 lb-ft)</span><span>Velocidad libre: 4,200 RPM</span><span>Presión máxima de trabajo: 90 PSI (6.2 bar)</span></p>
+<div class="price">₡129.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Llave de Impacto 1" larga"="" src="IMG FERTON/PSN074.jpg"/>
+<div class="meta"><b>PSN074</b><em>Llaves de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Llave de Impacto 1" Larga</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1"</span><span>Torque máximo: 2,200 N.m (1,623 lb-ft)</span><span>Velocidad libre: 4,200 RPM</span><span>Presión máxima de trabajo: 90 PSI (6.2 bar)</span></p>
+<div class="price">₡159.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img 17="" alt="Llave de Impacto 1/2" pzs"="" src="IMG FERTON/YNJ017.jpg"/>
+<div class="meta"><b>YNJ017</b><em>Llaves de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Llave de Impacto 1/2" 17 Pzs</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Torque máximo: 660 N.m (487 lb-ft)</span><span>Velocidad libre: 8,000 RPM</span><span>Presión máxima de trabajo: 90 PSI (6.2 bar)</span></p>
+<div class="price">₡48.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton"><div class="promo-badge liquidacion">LIQUIDACIÓN</div>
+<img "="" alt="Llave de Impacto 1/2"src="IMG FERTON/PSN102.jpg"/>
+<div class="meta"><b>PSN102</b><em>Llaves de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Llave de Impacto 1/2" Mini</h3>
+<p class="specs spec-lines-2"><span>Espiga: 1/2"</span><span>Torque máximo: 520 N.m (380 lb-ft)</span><span>Velocidad libre: 8,000 RPM</span><span>Presión máxima de trabajo: 90 PSI (6.2 bar)</span></p>
+<div class="price">₡34.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img "="" alt="Llave de Impacto 3/4" src="IMG FERTON/PSN160.jpg"/>
+<div class="meta"><b>PSN160</b><em>Llaves de impacto</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Llave de Impacto 3/4"</h3>
+<p class="specs spec-lines-1"><span>Espiga: 3/4"</span><span>Torque máximo: 1,600 N.m (1,180 lb-ft)</span><span>Velocidad libre: 4,200 RPM</span><span>Presión máxima de trabajo: 90 PSI (6.2 bar)</span></p>
+<div class="price">₡129.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Manguera para Vibrador 35mm x 4m" src="IMG FERTON/VBC35M.jpg"/>
+<div class="meta"><b>VBC35M</b><em>Construcción</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Manguera para Vibrador 35mm x 4m</h3>
+<p class="specs spec-lines-3"><span>Medida: 35mm x 4m</span><span>Equipo de compactación</span><span>30 días de garantía</span></p>
+<div class="price">₡45.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Motor Vibrador Concreto 2300W" src="IMG FERTON/VBC3HP.jpg"/>
+<div class="meta"><b>VBC3HP</b><em>Construcción</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Motor Vibrador Concreto 2300W</h3>
+<p class="specs spec-lines-3"><span>Potencia: 2300W</span><span>Equipo de compactación</span><span>30 días de garantía</span></p>
+<div class="price">₡84.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Mototool Eléctrico 135W" src="IMG FERTON/TRM040.jpg"/>
+<div class="meta"><b>TRM040</b><em>Herramientas eléctricas</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Mototool Eléctrico 135W</h3>
+<p class="specs spec-lines-1"><span>Potencia: 135W</span><span>Velocidad variable: Regulable en 6 niveles (8,000 a 32,000 RPM)</span><span>Capacidad: 3.2 mm (1/8")</span><span>40 Accesorios y estuche plástico</span></p>
+<div class="price">₡26.500</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Prensa Hidráulica 20 TON" src="IMG FERTON/MQP020.jpg"/>
+<div class="meta"><b>MQP020</b><em>Prensas hidráulicas</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Prensa Hidráulica 20 TON</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 20 toneladas</span><span>Dimensiones: 150cm x 15cm x 60cm</span><span>Altura del área de trabajo: 0 a 900mm</span></p>
+<div class="price">₡169.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Prensa Hidráulica 30 TON con Manómetro" src="IMG FERTON/MQP130.jpg"/>
+<div class="meta"><b>MQP130</b><em>Prensas hidráulicas</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Prensa Hidráulica 30 TON con Manómetro</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 30 toneladas</span><span>Área de trabajo: 60 a 1040mm</span><span>Ancho de la mesa: 250cm</span><span>Doble bomba</span><span>Manómetro</span></p>
+<div class="price">₡355.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Prensa Hidráulica 50 TON con Manómetro" src="IMG FERTON/MQP150.jpg"/>
+<div class="meta"><b>MQP150</b><em>Prensas hidráulicas</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Prensa Hidráulica 50 TON con Manómetro</h3>
+<p class="specs spec-lines-2"><span>Capacidad: 50 toneladas</span><span>Área de trabajo: 145 a 1040mm</span><span>Ancho de la mesa:330mm</span><span>Doble bomba</span><span>Manómetro</span></p>
+<div class="price">₡615.000</div>
+</article>
+
+<article class="card brand-ferton" data-brand="ferton">
+<img alt="Taladro Magnético 28mm" src="IMG FERTON/TLM828.jpg"/>
+<div class="meta"><b>TLM828</b><em>Herramientas eléctricas</em><span class="brand-label ferton">FERTON</span></div>
+<h3>Taladro Magnético 28mm</h3>
+<p class="specs spec-lines-1"><span>Capacidad: 28mm (Twist Drill) y 40mm (Coring Drill)</span><span>Voltaje: Funciona a 110V (60Hz)</span><span>Rango de velocidad: 100-600r/min</span><span>Potencia: 1200W</span><span>Acople: MT3</span></p>
+<div class="price">₡307.000</div>
+</article>
+</main></section><script>
 const q = document.getElementById('q');
 const buttons = document.querySelectorAll('.brand-tabs button');
 const brandCards = document.querySelectorAll('.big-brand');
@@ -1880,7 +2340,7 @@ applyFilters();
 <div class="product-modal hidden" id="productModal">
 <div class="product-modal-backdrop" id="modalBackdrop"></div>
 <div class="product-modal-box">
-<button class="product-modal-close" id="modalClose">×</button>
+<button class="product-modal-close" id="modalClose">x</button>
 <div id="modalContent"></div>
 </div>
 </div>
