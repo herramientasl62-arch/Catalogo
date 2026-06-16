@@ -986,6 +986,17 @@ header h1 .yellow-title{
     color:white !important;
     box-shadow:inset 0 -4px 0 var(--ferton-yellow) !important;
 }
+
+/* ===== SCROLL HACIA CATÁLOGO ===== */
+#catalog-section{
+    scroll-margin-top:140px;
+}
+@media(max-width:700px){
+    #catalog-section{
+        scroll-margin-top:165px;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -2310,7 +2321,12 @@ function openCatalog(brand){
     setActiveButton(activeBrand);
     if(q) q.value = '';
     applyFilters();
-    window.scrollTo({top:0, behavior:'smooth'});
+    setTimeout(() => {
+            const catalogSection = document.getElementById('catalog-section');
+            if (catalogSection) {
+                catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 80);
 }
 
 brandCards.forEach(card => card.addEventListener('click', () => openCatalog(card.dataset.openBrand)));
@@ -2330,7 +2346,12 @@ if(backHome){
         activeBrand = 'all';
         setActiveButton('all');
         applyFilters();
-        window.scrollTo({top:0, behavior:'smooth'});
+        setTimeout(() => {
+            const catalogSection = document.getElementById('catalog-section');
+            if (catalogSection) {
+                catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 80);
     });
 }
 
