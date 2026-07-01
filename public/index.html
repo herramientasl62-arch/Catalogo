@@ -1615,6 +1615,30 @@ header h1 .yellow-title{
         height:220px !important;
     }
 }
+
+
+/* ===== AJUSTE FINAL: ESPECIFICACIONES MÁS CENTRADAS Y CON AIRE ===== */
+.card .specs{
+    align-self:center !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+    margin:6px 0 22px !important;
+    padding:10px 0 !important;
+}
+
+.card .price{
+    margin-top:0 !important;
+}
+
+/* Mantiene el ajuste en móvil sin pegar texto al precio */
+@media(max-width:700px){
+    .card .specs{
+        margin:4px 0 20px !important;
+        padding:8px 0 !important;
+    }
+}
+
 </style>
 </head>
 <body>
