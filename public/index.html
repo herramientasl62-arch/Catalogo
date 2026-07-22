@@ -1700,6 +1700,21 @@ header h1 .yellow-title{
     }
 }
 
+
+/* ===== PROTECCIÓN DE IMÁGENES DEL CATÁLOGO ===== */
+.card img,
+.product-modal-box img{
+  -webkit-user-select:none !important;
+  user-select:none !important;
+  -webkit-user-drag:none !important;
+  user-drag:none !important;
+  -webkit-touch-callout:none !important;
+}
+.card img::selection,
+.product-modal-box img::selection{
+  background:transparent !important;
+}
+
 </style>
 </head>
 <body>
@@ -7151,5 +7166,33 @@ document.addEventListener('keydown', (event) => {
     if(event.key === 'ArrowRight') showNextProduct();
 });
 </script>
+
+<script>
+/* ===== PROTECCIÓN DE IMÁGENES DEL CATÁLOGO ===== */
+document.addEventListener("DOMContentLoaded", function () {
+  function protegerImagenes() {
+    document.querySelectorAll(".card img, .product-modal-box img").forEach(function (img) {
+      img.setAttribute("draggable", "false");
+      if (img.dataset.proteccionActiva === "true") return;
+      img.dataset.proteccionActiva = "true";
+      img.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+      img.addEventListener("dragstart", function (e) { e.preventDefault(); });
+      img.addEventListener("selectstart", function (e) { e.preventDefault(); });
+      img.addEventListener("touchstart", function () {
+        img.style.webkitTouchCallout = "none";
+        img.style.webkitUserSelect = "none";
+      }, { passive: true });
+    });
+  }
+
+  protegerImagenes();
+
+  new MutationObserver(protegerImagenes).observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+});
+</script>
+
 </body>
 </html>
