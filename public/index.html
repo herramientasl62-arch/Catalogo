@@ -7170,27 +7170,52 @@ document.addEventListener('keydown', (event) => {
 <script>
 /* ===== PROTECCIÓN DE IMÁGENES DEL CATÁLOGO ===== */
 document.addEventListener("DOMContentLoaded", function () {
-  function protegerImagenes() {
-    document.querySelectorAll(".card img, .product-modal-box img").forEach(function (img) {
-      img.setAttribute("draggable", "false");
-      if (img.dataset.proteccionActiva === "true") return;
-      img.dataset.proteccionActiva = "true";
-      img.addEventListener("contextmenu", function (e) { e.preventDefault(); });
-      img.addEventListener("dragstart", function (e) { e.preventDefault(); });
-      img.addEventListener("selectstart", function (e) { e.preventDefault(); });
-      img.addEventListener("touchstart", function () {
-        img.style.webkitTouchCallout = "none";
-        img.style.webkitUserSelect = "none";
-      }, { passive: true });
+    const selectorProtegido = ".card img, .product-modal-box img";
+
+    function esImagenProtegida(elemento) {
+        return elemento instanceof Element && elemento.matches(selectorProtegido);
+    }
+
+    function prepararImagenes() {
+        document.querySelectorAll(selectorProtegido).forEach(function (imagen) {
+            imagen.setAttribute("draggable", "false");
+            imagen.style.webkitTouchCallout = "none";
+            imagen.style.webkitUserSelect = "none";
+            imagen.style.userSelect = "none";
+        });
+    }
+
+    prepararImagenes();
+
+    /*
+     * Delegación de eventos en modo captura:
+     * funciona también con la imagen clonada que se inserta dentro del modal.
+     */
+    document.addEventListener("contextmenu", function (evento) {
+        if (esImagenProtegida(evento.target)) {
+            evento.preventDefault();
+            evento.stopPropagation();
+        }
+    }, true);
+
+    document.addEventListener("dragstart", function (evento) {
+        if (esImagenProtegida(evento.target)) {
+            evento.preventDefault();
+            evento.stopPropagation();
+        }
+    }, true);
+
+    document.addEventListener("selectstart", function (evento) {
+        if (esImagenProtegida(evento.target)) {
+            evento.preventDefault();
+            evento.stopPropagation();
+        }
+    }, true);
+
+    new MutationObserver(prepararImagenes).observe(document.body, {
+        childList: true,
+        subtree: true
     });
-  }
-
-  protegerImagenes();
-
-  new MutationObserver(protegerImagenes).observe(document.body, {
-    childList: true,
-    subtree: true
-  });
 });
 </script>
 
