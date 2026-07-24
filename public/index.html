@@ -1715,6 +1715,233 @@ header h1 .yellow-title{
   background:transparent !important;
 }
 
+
+
+/* ===== CORRECCIÓN DEFINITIVA DEL MODAL: SIN ESPACIOS EXCESIVOS ===== */
+.product-modal{
+    padding:14px !important;
+}
+
+.product-modal-box{
+    width:min(720px,96vw) !important;
+    max-height:96vh !important;
+    padding:18px 58px 12px !important;
+    overflow:hidden !important;
+}
+
+#modalContent{
+    width:100% !important;
+}
+
+.product-modal-box .card{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    max-height:none !important;
+    padding:0 !important;
+    margin:0 !important;
+    gap:0 !important;
+    overflow:visible !important;
+}
+
+.product-modal-box .card img{
+    order:1 !important;
+    display:block !important;
+    width:100% !important;
+    height:clamp(230px,40vh,340px) !important;
+    min-height:0 !important;
+    max-height:340px !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    padding:0 !important;
+    margin:0 0 8px !important;
+    flex:0 0 auto !important;
+}
+
+.product-modal-box .card .meta{
+    order:2 !important;
+    display:grid !important;
+    grid-template-columns:minmax(82px,auto) minmax(120px,1fr) minmax(100px,auto) !important;
+    align-items:center !important;
+    column-gap:12px !important;
+    width:100% !important;
+    min-height:28px !important;
+    margin:0 0 6px !important;
+    flex:0 0 auto !important;
+}
+
+.product-modal-box .card .availability-status{
+    order:3 !important;
+    align-self:center !important;
+    width:max-content !important;
+    min-height:25px !important;
+    padding:5px 10px !important;
+    margin:0 0 6px !important;
+    flex:0 0 auto !important;
+}
+
+.product-modal-box .card h3{
+    order:4 !important;
+    display:block !important;
+    width:100% !important;
+    min-height:0 !important;
+    margin:2px 0 8px !important;
+    padding:0 !important;
+    font-size:clamp(20px,2.4vw,27px) !important;
+    line-height:1.18 !important;
+    text-align:center !important;
+    flex:0 0 auto !important;
+}
+
+.product-modal-box .card .specs{
+    order:5 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 0 10px !important;
+    padding:0 !important;
+    gap:2px !important;
+    font-size:clamp(13px,1.6vw,16px) !important;
+    line-height:1.3 !important;
+    text-align:center !important;
+    flex:0 0 auto !important;
+}
+
+.product-modal-box .card .specs span{
+    display:block !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    line-height:1.3 !important;
+    text-align:center !important;
+}
+
+.product-modal-box .card .price{
+    order:6 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    min-height:48px !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:9px 14px !important;
+    font-size:clamp(23px,3vw,30px) !important;
+    line-height:1.1 !important;
+    text-align:center !important;
+    flex:0 0 auto !important;
+    overflow:visible !important;
+}
+
+.product-modal-box .card .price.offer-price{
+    gap:1px !important;
+    padding-top:7px !important;
+    padding-bottom:7px !important;
+}
+
+.product-modal-box .card .price.offer-price .regular-price{
+    display:block !important;
+    font-size:13px !important;
+    line-height:1.1 !important;
+    margin:0 !important;
+}
+
+.product-modal-box .card .price.offer-price .sale-price{
+    display:block !important;
+    font-size:25px !important;
+    line-height:1.05 !important;
+    margin:0 !important;
+}
+
+.product-modal-counter{
+    margin:5px 0 0 !important;
+    line-height:1 !important;
+}
+
+.product-modal-nav{
+    top:42% !important;
+}
+
+@media(max-height:780px) and (min-width:701px){
+    .product-modal-box .card img{
+        height:clamp(205px,34vh,270px) !important;
+    }
+
+    .product-modal-box .card h3{
+        font-size:21px !important;
+        margin-bottom:6px !important;
+    }
+
+    .product-modal-box .card .specs{
+        font-size:13px !important;
+        line-height:1.2 !important;
+        margin-bottom:7px !important;
+    }
+
+    .product-modal-box .card .specs span{
+        line-height:1.2 !important;
+    }
+
+    .product-modal-box .card .price{
+        min-height:43px !important;
+        padding:7px 12px !important;
+        font-size:24px !important;
+    }
+}
+
+@media(max-width:700px){
+    .product-modal{
+        padding:8px !important;
+    }
+
+    .product-modal-box{
+        width:98vw !important;
+        max-height:97vh !important;
+        padding:14px 42px 10px !important;
+        border-radius:20px !important;
+    }
+
+    .product-modal-box .card img{
+        height:clamp(190px,34vh,260px) !important;
+        margin-bottom:6px !important;
+    }
+
+    .product-modal-box .card .meta{
+        grid-template-columns:minmax(62px,auto) minmax(72px,1fr) minmax(88px,auto) !important;
+        column-gap:6px !important;
+        margin-bottom:5px !important;
+    }
+
+    .product-modal-box .card h3{
+        font-size:20px !important;
+        margin:2px 0 7px !important;
+    }
+
+    .product-modal-box .card .specs{
+        font-size:13px !important;
+        margin-bottom:8px !important;
+    }
+
+    .product-modal-box .card .price{
+        min-height:44px !important;
+        padding:8px 10px !important;
+        font-size:24px !important;
+    }
+
+    .product-modal-nav{
+        top:40% !important;
+    }
+}
+
 </style>
 </head>
 <body>
