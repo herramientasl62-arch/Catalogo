@@ -1942,6 +1942,17 @@ header h1 .yellow-title{
     }
 }
 
+
+/* ===== Ajuste navegación móvil: marcas siempre accesibles ===== */
+@media (max-width:700px){
+.notice.notice-sticky-top{position:relative!important;top:auto!important;z-index:1!important;margin:0!important;}
+.toolbar{position:sticky!important;top:0!important;z-index:50!important;background:rgba(255,255,255,.98)!important;backdrop-filter:blur(8px);box-shadow:0 3px 12px rgba(0,0,0,.10);}
+.brand-tabs{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:8px!important;padding-bottom:4px!important;}
+.brand-tabs::-webkit-scrollbar{display:none;}
+.brand-tabs button{flex:0 0 auto!important;white-space:nowrap!important;}
+#catalog-section{scroll-margin-top:120px!important;}
+}
+
 </style>
 </head>
 <body>
