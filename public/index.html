@@ -379,7 +379,6 @@ header p{
     .notice .contact{border-left:0;padding-left:0;border-top:1px solid #E2B93B;padding-top:12px;}
 }
 
-/* Ajuste visual de tarjetas y especificaciones */
 .card{position:relative;overflow:hidden;min-height:455px;}
 .card img{height:190px;}
 .specs{
@@ -401,11 +400,9 @@ header p{
 
 
 
-/* Alineación izquierda para especificaciones */
 .specs{text-align:left;}
 .price{text-align:center;}
 
-/* Tarjetas más amplias, efecto hover y etiquetas tipo banner */
 .grid{
     grid-template-columns:repeat(auto-fill,minmax(275px,1fr));
     gap:24px;
@@ -466,7 +463,6 @@ header p{
     .card:hover{transform:none;}
 }
 
-/* ===== Etiqueta promo sin sombra gris inferior ===== */
 .promo-badge{
     box-shadow:0 4px 12px rgba(0,0,0,.14) !important;
 }
@@ -474,11 +470,10 @@ header p{
     display:none !important;
 }
 
-/* ===== Colores VIKTEC: azul más claro + amarillo, sin naranja ===== */
 :root{
     --ml-blue:#1F5F9F;
     --viktec-yellow:#FFD233;
-    --viktec-orange:#1F5F9F;
+    --viktec-blue:#1F5F9F;
 }
 .brand-viktec .meta b{
     background:var(--viktec-yellow) !important;
@@ -507,7 +502,6 @@ header p{
     box-shadow:inset 0 -4px 0 var(--viktec-yellow) !important;
 }
 
-/* ===== Encabezado azul más claro ===== */
 header{
     background:
       linear-gradient(90deg, rgba(16, 72, 125, 0.96), rgba(21, 92, 163, 0.88)),
@@ -649,7 +643,6 @@ header h1 .yellow-title{
     display:none !important;
 }
 
-/* Corrección filtro por marca */
 .hidden{
     display:none !important;
 }
@@ -699,13 +692,11 @@ header h1 .yellow-title{
     padding-top:24px !important;
 }
 
-/* Buscador normal limpio */
 .toolbar input{
     height:48px !important;
     transition:height .18s ease, font-size .18s ease, box-shadow .18s ease;
 }
 
-/* Al tocar o escribir, el buscador se agranda un poco */
 .toolbar input:focus{
     height:58px !important;
     font-size:18px !important;
@@ -713,7 +704,6 @@ header h1 .yellow-title{
     outline:none !important;
 }
 
-/* En celular o pantallas pequeñas, evita que la barra ocupe demasiado */
 @media(max-width:700px){
     .toolbar{
         position:sticky !important;
@@ -725,7 +715,6 @@ header h1 .yellow-title{
     }
 }
 
-/* ===== AVISO STICKY ARRIBA + BARRA COMPACTA ===== */
 .notice.notice-sticky-top{
     position:sticky !important;
     top:0 !important;
@@ -746,7 +735,6 @@ header h1 .yellow-title{
     gap:12px !important;
 }
 
-/* Barra más pequeña debajo del aviso */
 .toolbar{
     position:sticky !important;
     top:54px !important;
@@ -789,7 +777,6 @@ header h1 .yellow-title{
     padding-top:28px !important;
 }
 
-/* ===== Modal de producto ===== */
 .card{
     cursor:pointer;
 }
@@ -885,7 +872,6 @@ header h1 .yellow-title{
     }
 }
 
-/* ===== AJUSTE FINAL: AVISO MÁS LEGIBLE ===== */
 .notice.notice-sticky-top{
     padding:12px 7vw !important;
 }
@@ -904,7 +890,6 @@ header h1 .yellow-title{
     }
 }
 
-/* ===== FERRAWYY ===== */
 :root{
     --ferrawyy-blue:#2E6F95;
     --ferrawyy-gray:#4A5568;
@@ -945,7 +930,6 @@ header h1 .yellow-title{
 }
 
 
-/* ===== FERTON ===== */
 :root{
     --ferton-yellow:#F7C600;
     --ferton-black:#323030;
@@ -988,7 +972,6 @@ header h1 .yellow-title{
     box-shadow:inset 0 -4px 0 var(--ferton-yellow) !important;
 }
 
-/* ===== SCROLL HACIA CATÁLOGO ===== */
 #catalog-section{
     scroll-margin-top:140px;
 }
@@ -999,8 +982,6 @@ header h1 .yellow-title{
 }
 
 
-
-/* ===== UYUSTOOLS ===== */
 :root{
     --uyus-yellow:#F6C400;
     --uyus-black:#242424;
@@ -1016,7 +997,6 @@ header h1 .yellow-title{
 .brand-tabs button[data-brand="uyustools"].active{background:var(--uyus-black) !important;color:white !important;box-shadow:inset 0 -4px 0 var(--uyus-yellow) !important;}
   
 
-/* ===== ORDEN Y ALINEACIÓN FINAL DE ETIQUETAS ===== */
 .meta{
     display:flex !important;
     align-items:center !important;
@@ -1048,7 +1028,6 @@ header h1 .yellow-title{
 }
 
 
-/* VIKTEC: amarillo, azul, amarillo */
 .brand-viktec .meta b{
     background:#FFD233 !important;
     color:#222 !important;
@@ -1062,7 +1041,6 @@ header h1 .yellow-title{
     color:#222 !important;
 }
 
-/* FERTON: amarillo más dorado */
 :root{
     --ferton-yellow:#F0B800;
     --ferton-black:#252525;
@@ -1102,7 +1080,6 @@ header h1 .yellow-title{
     box-shadow:inset 0 -4px 0 var(--ferton-yellow) !important;
 }
 
-/* UYUSTOOLS: amarillo más vivo para diferenciarlo de FERTON */
 :root{
     --uyus-yellow:#FFD000;
     --uyus-black:#202020;
@@ -1142,7 +1119,6 @@ header h1 .yellow-title{
     box-shadow:inset 0 -4px 0 var(--uyus-yellow) !important;
 }
 
-/* Etiquetas separadas, en un mismo renglón */
 .meta{
     display:grid !important;
     grid-template-columns:auto minmax(0,1fr) auto !important;
@@ -1174,7 +1150,6 @@ header h1 .yellow-title{
     justify-self:end !important;
 }
 
-/* En pantallas angostas: mantiene una línea sin pegar etiquetas */
 @media(max-width:700px){
     .meta{
         gap:7px !important;
@@ -1188,7 +1163,6 @@ header h1 .yellow-title{
     }
 }
 
-/* Modal con flechas para pasar productos */
 .product-modal-box{
     width:min(640px,94vw) !important;
     padding:22px 58px !important;
@@ -1244,9 +1218,6 @@ header h1 .yellow-title{
 }
 
 
-/* ===== CORRECCIÓN FINAL: ETIQUETAS EN TARJETAS Y MODAL ===== */
-
-/* Tarjetas normales: código, categoría y marca en el mismo renglón */
 .card .meta{
     display:flex !important;
     flex-direction:row !important;
@@ -1275,7 +1246,6 @@ header h1 .yellow-title{
     text-overflow:ellipsis !important;
 }
 
-/* Modal: evita que la tarjeta se acomode horizontal o desordenada */
 .product-modal-box .card{
     display:flex !important;
     flex-direction:column !important;
@@ -1351,7 +1321,6 @@ header h1 .yellow-title{
     margin-top:18px !important;
 }
 
-/* Flechas fuera del contenido para que no se mezclen con etiquetas */
 .product-modal-nav{
     top:50% !important;
 }
@@ -1416,13 +1385,11 @@ header h1 .yellow-title{
     color:var(--uyus-yellow-final) !important;
 }
 
-/* Tarjetas suficientemente anchas para que UYUSTOOLS no se corte */
 .grid{
     grid-template-columns:repeat(auto-fill,minmax(335px,1fr)) !important;
     align-items:stretch !important;
 }
 
-/* Mantener la tarjeta ordenada y estable */
 .card{
     min-width:0 !important;
     overflow:visible !important;
@@ -1444,7 +1411,6 @@ header h1 .yellow-title{
     margin-top:auto !important;
 }
 
-/* Código izquierda / categoría centro / marca derecha */
 .card .meta{
     display:grid !important;
     grid-template-columns:minmax(74px,auto) minmax(95px,1fr) minmax(92px,auto) !important;
@@ -1495,7 +1461,6 @@ header h1 .yellow-title{
     padding-right:8px !important;
 }
 
-/* Modal: misma alineación, sin que se partan las etiquetas */
 .product-modal-box{
     width:min(660px,94vw) !important;
     padding:22px 58px !important;
@@ -1612,7 +1577,6 @@ header h1 .yellow-title{
 }
 
 
-/* ===== AJUSTE FINAL: ESPECIFICACIONES MÁS CENTRADAS Y CON AIRE ===== */
 .card .specs{
     align-self:center !important;
     justify-content:flex-start !important;
@@ -1626,7 +1590,6 @@ header h1 .yellow-title{
     margin-top:0 !important;
 }
 
-/* Mantiene el ajuste en móvil sin pegar texto al precio */
 @media(max-width:700px){
     .card .specs{
         margin:4px 0 20px !important;
@@ -1635,12 +1598,10 @@ header h1 .yellow-title{
 }
 
 
-/* OFERTAS EXACTAS */
 .price.offer-price{display:flex!important;flex-direction:column!important;align-items:center!important;gap:2px!important}
 .price.offer-price .regular-price{font-size:13px!important;font-weight:700!important;text-decoration:line-through!important;opacity:.75!important}
 .price.offer-price .sale-price{font-size:21px!important;font-weight:900!important}
 
-/* ===== ESTADO DE DISPONIBILIDAD ===== */
 .availability-status{
     display:inline-flex !important;
     align-items:center !important;
@@ -1701,7 +1662,6 @@ header h1 .yellow-title{
 }
 
 
-/* ===== PROTECCIÓN DE IMÁGENES DEL CATÁLOGO ===== */
 .card img,
 .product-modal-box img{
   -webkit-user-select:none !important;
@@ -1715,8 +1675,6 @@ header h1 .yellow-title{
 }
 
 
-
-/* ===== CORRECCIÓN DEFINITIVA DEL MODAL: SIN ESPACIOS EXCESIVOS ===== */
 .product-modal{
     padding:14px !important;
 }
@@ -1942,7 +1900,6 @@ header h1 .yellow-title{
 }
 
 
-/* ===== Ajuste navegación móvil: marcas siempre accesibles ===== */
 @media (max-width:700px){
 .notice.notice-sticky-top{position:relative!important;top:auto!important;z-index:1!important;margin:0!important;}
 .toolbar{position:sticky!important;top:0!important;z-index:50!important;background:rgba(255,255,255,.98)!important;backdrop-filter:blur(8px);box-shadow:0 3px 12px rgba(0,0,0,.10);}
@@ -7407,7 +7364,6 @@ document.addEventListener('keydown', (event) => {
 </script>
 
 <script>
-/* ===== PROTECCIÓN DE IMÁGENES DEL CATÁLOGO ===== */
 document.addEventListener("DOMContentLoaded", function () {
     const selectorProtegido = ".card img, .product-modal-box img";
 
@@ -7426,10 +7382,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     prepararImagenes();
 
-    /*
-     * Delegación de eventos en modo captura:
-     * funciona también con la imagen clonada que se inserta dentro del modal.
-     */
+
     document.addEventListener("contextmenu", function (evento) {
         if (esImagenProtegida(evento.target)) {
             evento.preventDefault();
