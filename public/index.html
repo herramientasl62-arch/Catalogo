@@ -2435,6 +2435,167 @@ header h1 .yellow-title{
   setInterval(checkForUpdate, CHECK_EVERY_MS);
 })();
 </script>
+
+
+<style id="catalog-layout-2026">
+.catalog-view-heading{
+    margin:22px 7vw 0;
+    padding:18px 20px;
+    background:#fff;
+    border-radius:16px 16px 0 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    border-bottom:1px solid #e5e9ef;
+}
+.catalog-view-heading h2{
+    margin:0;
+    color:var(--ml-blue);
+    font-size:26px;
+}
+.catalog-view-subtitle{
+    margin-top:5px;
+    color:#667085;
+    font-size:13px;
+}
+.catalog-sort-label{
+    background:#f5f7fa;
+    border:1px solid #dfe5ec;
+    border-radius:10px;
+    padding:9px 12px;
+    color:#344054;
+    font-size:13px;
+    white-space:nowrap;
+}
+.catalog-sort-label span{font-weight:700;}
+
+.catalog-section .toolbar{
+    position:sticky;
+    top:0;
+    z-index:20;
+    padding:12px 7vw 16px !important;
+    box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+.catalog-nav-tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0 !important;
+    background:#123e70;
+    border-radius:12px;
+    overflow:hidden;
+    margin:0 0 12px !important;
+}
+.catalog-nav-tabs button{
+    border-radius:0 !important;
+    background:#123e70 !important;
+    color:#fff !important;
+    padding:12px 15px !important;
+    font-size:12px;
+}
+.catalog-nav-tabs button:hover{background:#1a518d !important;}
+.catalog-nav-tabs button.active{
+    background:#0b315d !important;
+    box-shadow:inset 0 -4px 0 #FFD233 !important;
+}
+.catalog-nav-tabs .ofertas-tab{margin-left:auto;}
+.catalog-nav-tabs .ofertas-tab.active{
+    background:#b88600 !important;
+    box-shadow:inset 0 -4px 0 #FFE58A !important;
+}
+.catalog-nav-tabs .liquidacion-tab.active{
+    background:#b51f2e !important;
+    box-shadow:inset 0 -4px 0 #ff9da8 !important;
+}
+
+#grid.grid{padding-top:18px !important;}
+
+.brand-divider{
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin:13px 0 0;
+    padding:10px 4px 8px;
+    border-bottom:3px solid #153B66;
+}
+.brand-divider strong{
+    font-size:22px;
+    letter-spacing:.3px;
+}
+.brand-divider span{
+    font-size:12px;
+    font-weight:800;
+    padding:6px 10px;
+    border-radius:999px;
+    background:#eef2f6;
+}
+.brand-divider[data-brand="viktec"]{border-color:#FFD233;color:#153B66;}
+.brand-divider[data-brand="epont"]{border-color:#A93226;color:#A93226;}
+.brand-divider[data-brand="rotake"]{border-color:#D62828;color:#D62828;}
+.brand-divider[data-brand="ferrawyy"]{border-color:#4b5563;color:#374151;}
+.brand-divider[data-brand="ferton"]{border-color:#D6A900;color:#8a6a00;}
+.brand-divider[data-brand="uyustools"]{border-color:#2266a7;color:#2266a7;}
+
+article.card.sold-out,
+article.card.sold-out img,
+article.card.sold-out h3,
+article.card.sold-out .specs,
+article.card.sold-out .price{
+    opacity:1 !important;
+    filter:none !important;
+}
+article.card.sold-out::before{
+    display:none !important;
+    content:none !important;
+}
+.availability-status.status-sold{
+    opacity:1 !important;
+}
+
+.promo-badge.oferta{
+    background:linear-gradient(135deg,#FFD233,#E6A700) !important;
+    color:#222 !important;
+}
+.promo-badge.liquidacion{
+    background:linear-gradient(135deg,#D62828,#9F1515) !important;
+    color:#fff !important;
+}
+
+.empty-view-message{
+    grid-column:1/-1;
+    background:#fff;
+    border:1px dashed #cfd6df;
+    color:#667085;
+    border-radius:14px;
+    padding:35px 20px;
+    text-align:center;
+    font-weight:700;
+}
+
+@media(max-width:900px){
+    .catalog-view-heading{margin-left:4vw;margin-right:4vw;}
+    .catalog-section .toolbar{padding-left:4vw !important;padding-right:4vw !important;}
+    .catalog-nav-tabs .ofertas-tab{margin-left:0;}
+}
+@media(max-width:650px){
+    .catalog-view-heading{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+    .catalog-view-heading h2{font-size:21px;}
+    .catalog-nav-tabs{overflow:visible;border-radius:10px;}
+    .catalog-nav-tabs button{
+        flex:1 1 33.333%;
+        text-align:center;
+        padding:10px 7px !important;
+    }
+    .catalog-sort-label{width:100%;}
+    .brand-divider strong{font-size:19px;}
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -2547,38 +2708,51 @@ header h1 .yellow-title{
 </div>
 </div>
 </div>
+<div class="catalog-view-heading">
+<div>
+<h2 id="catalogViewTitle">TODOS LOS PRODUCTOS</h2>
+<div class="catalog-view-subtitle" id="catalogViewSubtitle">Organizados por marca y alfabéticamente</div>
+</div>
+<div class="catalog-sort-label"><span>Orden:</span> Marca + A–Z</div>
+</div>
 <div class="toolbar">
 <button class="back-home" id="backHome">
      ← Volver a marcas
     </button>
-<div class="brand-tabs">
-<button class="active" data-brand="all">
-      Todas
-     </button>
-<button data-brand="viktec">
-      VIKTEC
-     </button>
-<button data-brand="epont">
-      EPONT
-     </button>
-<button data-brand="rotake">
-      ROTAKE
-     </button>
-<button data-brand="ferrawyy">
-      FERRAWYY
-     </button>
-<button data-brand="ferton">
-      FERTON
-     </button>
-<button data-brand="uyustools">
-      UYUSTOOLS
-     </button>
+<div class="brand-tabs catalog-nav-tabs">
+<button class="active" data-view="all">TODAS</button>
+<button data-view="viktec">VIKTEC</button>
+<button data-view="epont">EPONT</button>
+<button data-view="rotake">ROTAKE</button>
+<button data-view="ferrawyy">FERRAWYY</button>
+<button data-view="ferton">FERTON</button>
+<button data-view="uyustools">UYUSTOOLS</button>
+<button class="promo-tab ofertas-tab" data-view="ofertas">🏷️ OFERTAS</button>
+<button class="promo-tab liquidacion-tab" data-view="liquidacion">🔖 LIQUIDACIÓN</button>
 </div>
 <input id="q" placeholder="Buscar por código, nombre, categoría o marca..."/>
 <div class="counter" id="counter">
 </div>
 </div>
 <main class="grid" id="grid">
+<article class="card brand-uyustools" data-brand="uyustools">
+<img alt="Juego de Tarrajas 75 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/TRA75U.jpg"/>
+<div class="meta">
+<b>TRA75U</b>
+<em>Machos y tarrajas</em>
+<span class="brand-label uyustools">UYUSTOOLS</span>
+</div>
+<div class="availability-status status-available">🟢 Disponible</div>
+<h3>Juego de Tarrajas 75 Pzs</h3>
+<p class="specs spec-lines-3">
+<span>Machos y tarrajas: M3 a M12, 4-40 a 1/2, 1/8-BSP, 1/8-NPT (34 medidas c/u)</span>
+<span>Porta macho: 1 ajustable + 2 en T</span>
+<span>Porta tarraja: 1 maneral circular</span>
+<span>Incluye: 2 calibradores y destornillador</span>
+</p>
+<div class="price">₡49.000</div>
+</article>
+
 <article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Aceitera 300ml" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/ACA300U.jpg"/>
 <div class="meta">
@@ -2609,14 +2783,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡3.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Adaptadores de 6 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01619.jpg"/>
 <div class="meta">
 <b>VT01619</b>
 <em>Accesorios de taller</em>
 <span class="brand-label viktec">VIKTEC</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Adaptadores de 6 Pzs</h3>
 <p class="specs spec-lines-4">
 <span>Reductores:</span>
@@ -2675,14 +2849,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡13.500</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Alicate para Filtro" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/ALM001.jpg"/>
 <div class="meta">
 <b>ALM001</b>
 <em>Alicates</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Alicate para Filtro</h3>
 <p class="specs spec-lines-2">
 <span>Rango de Apertura: 53mm a 118mm</span>
@@ -2864,14 +3038,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡7.500</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Bomba Diesel 12V" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/BMD001.jpg"/>
 <div class="meta">
 <b>BMD001</b>
 <em>Bombas</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Bomba Diesel 12V</h3>
 <p class="specs spec-lines-5">
 <span>Voltaje: 12V</span>
@@ -2897,7 +3071,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡19.000</span><span class="sale-price">₡13.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Burras de 3 TON (Par)" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/BSG03U.jpg"/>
 <div class="meta">
 <b>BSG03U</b>
@@ -2927,7 +3101,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡35.000</span><span class="sale-price">₡23.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Burras de 6 TON (Par)" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/BSG06U.jpg"/>
 <div class="meta">
 <b>BSG06U</b>
@@ -2958,7 +3132,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡21.000</span><span class="sale-price">₡17.000</span></div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton" data-brand="ferton">
 <img alt="Caja para Herramientas 7 Compartimientos" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/CJH93F.jpg"/>
 <div class="meta">
 <b>CJH93F</b>
@@ -2989,7 +3163,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡31.900</span><span class="sale-price">₡17.500</span></div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Camilla Plástica para Mecánico" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/PLP40YT.jpg"/>
 <div class="meta">
 <b>PLP40YT</b>
@@ -3036,14 +3210,14 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡31.000</span><span class="sale-price">₡22.000</span></div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Carrito para Herramientas 3 Niveles" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/CZH91YT.jpg"/>
 <div class="meta">
 <b>CZH91YT</b>
 <em>Almacenamiento</em>
 <span class="brand-label ferrawyy">FERRAWYY</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Carrito para Herramientas 3 Niveles</h3>
 <p class="specs spec-lines-3">
 <span>3 niveles</span>
@@ -3052,7 +3226,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡29.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Cobertor Magnético para Guardabarros" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT14015.jpg"/>
 <div class="meta">
 <b>VT14015</b>
@@ -3113,7 +3287,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡15.000</span><span class="sale-price">₡10.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Compresor de Resortes Profesionales" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01032B.jpg"/>
 <div class="meta">
 <b>VT01032B</b>
@@ -3147,7 +3321,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡29.000</span><span class="sale-price">₡22.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Compresor 100 Litros 3HP" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/CMP100U-PA.jpg"/>
 <div class="meta">
 <b>CMP100U-PA</b>
@@ -3181,7 +3355,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡15.000</span><span class="sale-price">₡10.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Compresor para Resortes 300mm" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/SCE300.jpg"/>
 <div class="meta">
 <b>SCE300</b>
@@ -3197,7 +3371,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡16.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Compresor para Resortes 370mm" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/SCE370.jpg"/>
 <div class="meta">
 <b>SCE370</b>
@@ -3482,14 +3656,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡8.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Destornillador de Golpe 12 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DEG12SU.jpg"/>
 <div class="meta">
 <b>DEG12SU</b>
 <em>Destornilladores</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Destornillador de Golpe 12 Pzs</h3>
 <p class="specs spec-lines-3">
 <span>12 piezas</span>
@@ -3680,14 +3854,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡3.500</div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton" data-brand="ferton">
 <img alt="Elevador para Motocicleta" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/ELM8F.jpg"/>
 <div class="meta">
 <b>ELM8F</b>
 <em>Equipos de taller</em>
 <span class="brand-label ferton">FERTON</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Elevador para Motocicleta</h3>
 <p class="specs spec-lines-5">
 <span>Capacidad: 1000 lbs</span>
@@ -3863,7 +4037,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡18.000</span><span class="sale-price">₡13.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Extractor de Inyectores Diesel" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01086.jpg"/>
 <div class="meta">
 <b>VT01086</b>
@@ -3894,7 +4068,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡34.000</span><span class="sale-price">₡29.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Extractor de Puntas de Eje" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01392B.jpg"/>
 <div class="meta">
 <b>VT01392B</b>
@@ -4024,7 +4198,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡9.000</span><span class="sale-price">₡5.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Extractor de Volantes y Poleas" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01007.jpg"/>
 <div class="meta">
 <b>VT01007</b>
@@ -4039,7 +4213,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡15.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Extractor Polea de Alternador 18 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01318.jpg"/>
 <div class="meta">
 <b>VT01318</b>
@@ -4140,7 +4314,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡5.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Extractor Roles 3 Uñas - 4"' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/SDR204.jpg"/>
 <div class="meta">
 <b>SDR204</b>
@@ -4205,7 +4379,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡15.000</span><span class="sale-price">₡9.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Extractor Tapa de Tanque de Combustible" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01857.jpg"/>
 <div class="meta">
 <b>VT01857</b>
@@ -4395,7 +4569,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡39.000</span><span class="sale-price">₡29.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Gata de Botella 32 TON" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/GAB032.jpg"/>
 <div class="meta">
 <b>GAB032</b>
@@ -4411,7 +4585,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡43.000</div>
 </article>
-<article class="card brand-epont sold-out" data-brand="epont">
+<article class="card brand-epont" data-brand="epont">
 <img alt="Gata de Botella 50 TON" decoding="async" draggable="false" loading="lazy" src="IMG EPONT/E0250S.jpg"/>
 <div class="meta">
 <b>E0250S</b>
@@ -4443,7 +4617,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡105.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Gata Hidráulica Perfil Bajo 3 TON" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/GAM103.jpg"/>
 <div class="meta">
 <b>GAM103</b>
@@ -4476,7 +4650,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡41.000</div>
 </article>
-<article class="card brand-epont sold-out" data-brand="epont">
+<article class="card brand-epont" data-brand="epont">
 <img alt="Gata Hidráulica 2.5 TON Perfil Bajo" decoding="async" draggable="false" loading="lazy" src="IMG EPONT/YP1401.jpg"/>
 <div class="meta">
 <b>YP1401</b>
@@ -4510,7 +4684,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡89.000</span><span class="sale-price">₡65.000</span></div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Gata Hidráulica 3 TON Perfil Bajo" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/GTZ103.jpg"/>
 <div class="meta">
 <b>GTZ103</b>
@@ -4560,7 +4734,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡17.500</span><span class="sale-price">₡10.000</span></div>
 </article>
-<article class="card brand-epont sold-out" data-brand="epont">
+<article class="card brand-epont" data-brand="epont">
 <img alt="Gata para Cajas Telescópica" decoding="async" draggable="false" loading="lazy" src="IMG EPONT/E103-5A.jpg"/>
 <div class="meta">
 <b>E103-5A</b>
@@ -4576,7 +4750,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡191.000</div>
 </article>
-<article class="card brand-epont sold-out" data-brand="epont">
+<article class="card brand-epont" data-brand="epont">
 <img alt="Gata para Cajas 0.5 TON" decoding="async" draggable="false" loading="lazy" src="IMG EPONT/E1301.jpg"/>
 <div class="meta">
 <b>E1301</b>
@@ -4592,14 +4766,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡149.000</div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton" data-brand="ferton">
 <img alt="Gata para Cajas 1 Tonelada" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/GAF001.jpg"/>
 <div class="meta">
 <b>GAF001</b>
 <em>Gatas para transmisión</em>
 <span class="brand-label ferton">FERTON</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Gata para Cajas 1 Tonelada</h3>
 <p class="specs spec-lines-4">
 <span>Capacidad: 1 tonelada</span>
@@ -4797,7 +4971,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡6.000</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 1/2"' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-013K.jpg"/>
 <div class="meta">
 <b>RT-013K</b>
@@ -4813,7 +4987,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡28.000</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 3/4"' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-001K.jpg"/>
 <div class="meta">
 <b>RT-001K</b>
@@ -4876,7 +5050,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡23.500</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Juego de Cubos de Impacto Hexagonal" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAH801.jpg"/>
 <div class="meta">
 <b>DAH801</b>
@@ -4892,7 +5066,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡28.500</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Juego de Cubos de Impacto 1/2" - 10 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAA1210L.jpg"/>
 <div class="meta">
 <b>DAA1210L</b>
@@ -4907,7 +5081,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡19.000</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Juego de Cubos de Impacto 3/4" - 21 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-040K.jpg"/>
 <div class="meta">
 <b>RT-040K</b>
@@ -4973,7 +5147,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡18.000</span><span class="sale-price">₡13.500</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt='Juego de Cubos de 3/8" - 36 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT13326.jpg"/>
 <div class="meta">
 <b>VT13326</b>
@@ -5007,7 +5181,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡43.000</span><span class="sale-price">₡37.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de Cubos Estrella 12 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT13024.jpg"/>
 <div class="meta">
 <b>VT13024</b>
@@ -5039,14 +5213,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡19.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Juego de Cubos Hexagonal Largos" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAHE902.jpg"/>
 <div class="meta">
 <b>DAHE902</b>
 <em>Cubos/Juego de cubos</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Juego de Cubos Hexagonal Largos</h3>
 <p class="specs spec-lines-2">
 <span>Espiga: 1/2"</span>
@@ -5070,7 +5244,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡14.500</span><span class="sale-price">₡11.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de Cubos para Sensor de Oxígeno" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01042.jpg"/>
 <div class="meta">
 <b>VT01042</b>
@@ -5149,7 +5323,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡30.000</span><span class="sale-price">₡24.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Juego de Cubos 1/4" - 46 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAD46U.jpg"/>
 <div class="meta">
 <b>DAD46U</b>
@@ -5165,14 +5339,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡22.900</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Juego de Cubos 3/8" - 15 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAT815.jpg"/>
 <div class="meta">
 <b>DAT815</b>
 <em>Cubos/Juego de cubos</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Juego de Cubos 3/8" - 15 Pzs</h3>
 <p class="specs spec-lines-1">
 <span>10 cubos: 10mm a 24mm</span>
@@ -5213,7 +5387,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡25.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Juego de Cubos 1/2" - 24 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAD24U.jpg"/>
 <div class="meta">
 <b>DAD24U</b>
@@ -5265,7 +5439,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡27.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Juego de Cubos 3/4" - 26 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DAD026.jpg"/>
 <div class="meta">
 <b>DAD026</b>
@@ -5273,7 +5447,7 @@ header h1 .yellow-title{
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
 <div class="availability-status status-sold">🔴 Agotado</div>
-<h3>Juego de Cubos 3/4" - 26 Pzs</h3>
+<h3>Juego de Cubos de Impacto 3/4" - 26 Pzs</h3>
 <p class="specs spec-lines-2">
 <span>Cubos 3/4": 21mm a 50mm</span>
 <span>Cubos 1": 55, 60, 65mm</span>
@@ -5313,7 +5487,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡17.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Juego de Cubos Torx/Allen 14 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/TUP014.jpg"/>
 <div class="meta">
 <b>TUP014</b>
@@ -5374,14 +5548,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡8.000</div>
 </article>
-<article class="card brand-ferrawyy has-promo sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy has-promo" data-brand="ferrawyy">
 <img alt='Juego de Cubos 1/4" y 1/2" - 108 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/DAD108W.jpg"/>
 <div class="meta">
 <b>DAD108W</b>
 <em>Cubos</em>
 <span class="brand-label ferrawyy">FERRAWYY</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Juego de Cubos 1/4" y 1/2" - 108 Pzs</h3>
 <p class="specs spec-lines-3">
 <span>Espiga: 1/4" y 1/2"</span>
@@ -5390,7 +5564,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡41.000</div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt='Juego de Cubos 3/8", 1/4" y 1/2" - 216 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/DAD216W.jpg"/>
 <div class="meta">
 <b>DAD216W</b>
@@ -5547,7 +5721,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡2.500</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Juego de Juego de Cubos Largos 1/4" - 10 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/DA1410.jpg"/>
 <div class="meta">
 <b>DA1410</b>
@@ -5595,7 +5769,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡14.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de Llaves Abocinadas 6 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT19089.jpg"/>
 <div class="meta">
 <b>VT19089</b>
@@ -5637,7 +5811,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡30.000</span><span class="sale-price">₡27.000</span></div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Juego de Llaves Corofija Doble" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/YRS803.jpg"/>
 <div class="meta">
 <b>YRS803</b>
@@ -5651,7 +5825,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡12.500</div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Juego de Llaves en Pulgadas 14 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/YOS814.jpg"/>
 <div class="meta">
 <b>YOS814</b>
@@ -5666,7 +5840,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡16.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de Llaves para Polea Tensora" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01850B.jpg"/>
 <div class="meta">
 <b>VT01850B</b>
@@ -5695,7 +5869,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡15.000</div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Juego de Llaves Ratchet Dobles" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/YRH5YT.jpg"/>
 <div class="meta">
 <b>YRH5YT</b>
@@ -5723,7 +5897,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡25.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Juego de O-ring 382 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/GOS382M.jpg"/>
 <div class="meta">
 <b>GOS382M</b>
@@ -5738,7 +5912,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡10.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de O-Ring 419 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01180.jpg"/>
 <div class="meta">
 <b>VT01180</b>
@@ -5784,7 +5958,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡20.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de Sacatacos 10 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT13155.jpg"/>
 <div class="meta">
 <b>VT13155</b>
@@ -5800,7 +5974,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡27.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Juego de Sacatacos 10 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT13254A.jpg"/>
 <div class="meta">
 <b>VT13254A</b>
@@ -5982,7 +6156,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡39.000</span><span class="sale-price">₡31.000</span></div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton" data-brand="ferton">
 <img alt="Kit Mototool Neumático 15 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/MTN015.jpg"/>
 <div class="meta">
 <b>MTN015</b>
@@ -6000,7 +6174,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡17.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Kit para Mantenimiento de Frenos" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT13108.jpg"/>
 <div class="meta">
 <b>VT13108</b>
@@ -6015,7 +6189,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡44.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Kit Probador de Vacío y Purgador de Frenos" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01046.jpg"/>
 <div class="meta">
 <b>VT01046</b>
@@ -6048,7 +6222,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡19.900</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Kit Reparación Resortes de Válvula" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01718.jpg"/>
 <div class="meta">
 <b>VT01718</b>
@@ -6081,7 +6255,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡33.900</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Lijadora Roto-Orbital 5"' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/UY-LJR125.jpg"/>
 <div class="meta">
 <b>UY-LJR125</b>
@@ -6275,7 +6449,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡129.000</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 1" Larga' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-5665K.jpg"/>
 <div class="meta">
 <b>RT-5665K</b>
@@ -6344,7 +6518,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡48.000</span><span class="sale-price">₡43.000</span></div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 18V 1/2"' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-8811.jpg"/>
 <div class="meta">
 <b>RT-8811</b>
@@ -6363,7 +6537,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡115.000</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Llave de Impacto 18V 3/4"' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-8813B.jpg"/>
 <div class="meta">
 <b>RT-8813B</b>
@@ -6398,7 +6572,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡10.000</span><span class="sale-price">₡6.500</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Llave para Filtro Aceite" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/YA65110.jpg"/>
 <div class="meta">
 <b>YA65110</b>
@@ -6507,7 +6681,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡12.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Manguera para Compresor 15m" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/MG3850.jpg"/>
 <div class="meta">
 <b>MG3850</b>
@@ -6523,14 +6697,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡19.000</div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton" data-brand="ferton">
 <img alt="Manguera para Vibrador 35mm x 4m" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/VBC35M.jpg"/>
 <div class="meta">
 <b>VBC35M</b>
 <em>Construcción</em>
 <span class="brand-label ferton">FERTON</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Manguera para Vibrador 35mm x 4m</h3>
 <p class="specs spec-lines-3">
 <span>Medida: 35mm x 4m</span>
@@ -6607,7 +6781,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡12.500</span><span class="sale-price">₡8.000</span></div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Medidor Compresión Gasolina 4 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/TSC001.jpg"/>
 <div class="meta">
 <b>TSC001</b>
@@ -6624,7 +6798,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡22.900</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Medidor Compresión Gasolina 8 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/CMD801.jpg"/>
 <div class="meta">
 <b>CMD801</b>
@@ -6674,7 +6848,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡17.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt="Medidor Fugas de Radiador 14 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01064.jpg"/>
 <div class="meta">
 <b>VT01064</b>
@@ -6774,7 +6948,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡24.000</div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Mezcladora de Concreto 200 Litros" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/BTE200-PA.jpg"/>
 <div class="meta">
 <b>BTE200-PA</b>
@@ -6791,7 +6965,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡229.000</div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Mezcladora de Concreto 260 Litros" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/BTE260-PA.jpg"/>
 <div class="meta">
 <b>BTE260-PA</b>
@@ -6809,14 +6983,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡259.000</div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton" data-brand="ferton">
 <img alt="Motor Vibrador Concreto 2300W" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/VBC3HP.jpg"/>
 <div class="meta">
 <b>VBC3HP</b>
 <em>Construcción</em>
 <span class="brand-label ferton">FERTON</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Motor Vibrador Concreto 2300W</h3>
 <p class="specs spec-lines-3">
 <span>Potencia: 2300W</span>
@@ -6842,7 +7016,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡26.500</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Mototool Neumático 1/4"' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-1108.jpg"/>
 <div class="meta">
 <b>RT-1108</b>
@@ -6858,7 +7032,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡24.000</div>
 </article>
-<article class="card brand-rotake sold-out" data-brand="rotake">
+<article class="card brand-rotake" data-brand="rotake">
 <img alt='Mototool Neumático 1/4" 13 Pzs' decoding="async" draggable="false" loading="lazy" src="IMG ROTAKE/RT-1206K-P.jpg"/>
 <div class="meta">
 <b>RT-1206K-P</b>
@@ -6928,7 +7102,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡58.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec" data-brand="viktec">
 <img alt='Palanca Jumbo 36"' decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT13051.jpg"/>
 <div class="meta">
 <b>VT13051</b>
@@ -7153,7 +7327,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡9.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt="Pistola Pintar" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/SP827A1.jpg"/>
 <div class="meta">
 <b>SP827A1</b>
@@ -7185,7 +7359,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡49.000</div>
 </article>
-<article class="card brand-ferrawyy sold-out" data-brand="ferrawyy">
+<article class="card brand-ferrawyy" data-brand="ferrawyy">
 <img alt="Pluma Hidráulica 2 Toneladas" decoding="async" draggable="false" loading="lazy" src="IMG FERRAWYY/GAM2YT.jpg"/>
 <div class="meta">
 <b>GAM2YT</b>
@@ -7221,14 +7395,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡39.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Prensa de Banco 6"' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/TOB306.jpg"/>
 <div class="meta">
 <b>TOB306</b>
 <em>Prensas</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Prensa de Banco 6"</h3>
 <p class="specs spec-lines-2">
 <span>Medida: 6"</span>
@@ -7241,7 +7415,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡49.000</div>
 </article>
-<article class="card brand-uyustools sold-out" data-brand="uyustools">
+<article class="card brand-uyustools" data-brand="uyustools">
 <img alt='Prensa de Banco 8"' decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/TOB308.jpg"/>
 <div class="meta">
 <b>TOB308</b>
@@ -7276,7 +7450,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡179.000</span><span class="sale-price">₡142.000</span></div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton " data-brand="ferton">
 <img alt="Prensa Hidráulica 20 TON" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/MQP020.jpg"/>
 <div class="meta">
 <b>MQP020</b>
@@ -7307,7 +7481,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡239.000</span><span class="sale-price">₡175.000</span></div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton " data-brand="ferton">
 <img alt="Prensa Hidráulica 30 TON con Manómetro" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/MQP130.jpg"/>
 <div class="meta">
 <b>MQP130</b>
@@ -7325,7 +7499,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡355.000</div>
 </article>
-<article class="card brand-ferton sold-out" data-brand="ferton">
+<article class="card brand-ferton " data-brand="ferton">
 <img alt="Prensa Hidráulica 50 TON con Manómetro" decoding="async" draggable="false" loading="lazy" src="IMG FERTON/MQP150.jpg"/>
 <div class="meta">
 <b>MQP150</b>
@@ -7457,7 +7631,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡6.500</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec " data-brand="viktec">
 <img alt="Recolector de Aceite 10L" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01378B.jpg"/>
 <div class="meta">
 <b>VT01378B</b>
@@ -7471,7 +7645,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡13.500</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec " data-brand="viktec">
 <img alt="Recolector de Aceite 15L" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01634.jpg"/>
 <div class="meta">
 <b>VT01634</b>
@@ -7551,7 +7725,7 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡59.000</div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec " data-brand="viktec">
 <img alt="Reparador de Roscas Cárter de Aceite 114 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01325.jpg"/>
 <div class="meta">
 <b>VT01325</b>
@@ -7648,7 +7822,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡19.000</span><span class="sale-price">₡13.000</span></div>
 </article>
-<article class="card brand-viktec sold-out" data-brand="viktec">
+<article class="card brand-viktec " data-brand="viktec">
 <img alt="Set de Palancas 4 Pzs" decoding="async" draggable="false" loading="lazy" src="IMG VIKTEC/VT01659.jpg"/>
 <div class="meta">
 <b>VT01659</b>
@@ -7742,7 +7916,7 @@ header h1 .yellow-title{
 </p>
 <div class="price offer-price"><span class="regular-price">₡49.000</span><span class="sale-price">₡37.000</span></div>
 </article>
-<article class="card brand-epont sold-out" data-brand="EPONT">
+<article class="card brand-epont " data-brand="EPONT">
 <img alt="Soporte Transversal" decoding="async" draggable="false" loading="lazy" src="IMG EPONT/E2305.jpg"/>
 <div class="meta"><b>E2305</b><em>Equipos hidráulicos</em><span class="brand-label epont">EPONT</span></div>
 <div class="availability-status status-sold">🔴 Agotado</div>
@@ -7836,14 +8010,14 @@ header h1 .yellow-title{
 </p>
 <div class="price">₡23.500</div>
 </article>
-<article class="card brand-uyustools has-promo sold-out" data-brand="uyustools">
+<article class="card brand-uyustools has-promo " data-brand="uyustools">
 <img alt="Tede 2 Toneladas x 3 Metros" decoding="async" draggable="false" loading="lazy" src="IMG UYUSTOOLS/TEC202.jpg"/>
 <div class="meta">
 <b>TEC202</b>
 <em>Elevación</em>
 <span class="brand-label uyustools">UYUSTOOLS</span>
 </div>
-<div class="availability-status status-sold">🔴 Agotado</div>
+<div class="availability-status status-available">🟢 Disponible</div>
 <h3>Tecle 2 TON x 3m</h3>
 <p class="specs spec-lines-2">
 <span>Capacidad: 2 toneladas</span>
@@ -7932,17 +8106,30 @@ header h1 .yellow-title{
 <div class="price offer-price"><span class="regular-price">₡15.000</span><span class="sale-price">₡10.000</span></div>
 </article></main>
 </section>
-<script>
-   const q = document.getElementById('q');
-const buttons = document.querySelectorAll('.brand-tabs button');
+<script id="catalog-controller-2026">
+const q = document.getElementById('q');
+const viewButtons = document.querySelectorAll('.catalog-nav-tabs button[data-view]');
 const brandCards = document.querySelectorAll('.big-brand');
-const cards = document.querySelectorAll('article.card');
+const cards = Array.from(document.querySelectorAll('article.card'));
 const counter = document.getElementById('counter');
 const landing = document.getElementById('landing');
 const catalogSection = document.getElementById('catalog-section');
 const backHome = document.getElementById('backHome');
+const grid = document.getElementById('grid');
+const viewTitle = document.getElementById('catalogViewTitle');
+const viewSubtitle = document.getElementById('catalogViewSubtitle');
 
-let activeBrand = 'all';
+const BRAND_ORDER = ['viktec','epont','rotake','ferrawyy','ferton','uyustools'];
+const BRAND_NAMES = {
+    viktec:'VIKTEC',
+    epont:'EPONT',
+    rotake:'ROTAKE',
+    ferrawyy:'FERRAWYY',
+    ferton:'FERTON',
+    uyustools:'UYUSTOOLS'
+};
+
+let activeView = 'all';
 
 function normalizeText(value){
     return (value || '')
@@ -7956,58 +8143,164 @@ function normalizeText(value){
         .trim();
 }
 
+function productName(card){
+    const h3 = card.querySelector('h3');
+    return (h3 ? h3.textContent : '').trim();
+}
+
+function brandIndex(card){
+    const brand = (card.dataset.brand || '').toLowerCase();
+    const pos = BRAND_ORDER.indexOf(brand);
+    return pos === -1 ? 999 : pos;
+}
+
+function hasPromo(card, type){
+    const badge = card.querySelector('.promo-badge');
+    return !!(badge && badge.classList.contains(type));
+}
+
 cards.forEach(card => {
     card.dataset.search = normalizeText(card.innerText);
 });
 
-function applyFilters(){
-    const text = normalizeText(q ? q.value : '');
-    let visible = 0;
+function matchesCurrentView(card){
+    const brand = (card.dataset.brand || '').toLowerCase().trim();
+    if(activeView === 'all') return true;
+    if(activeView === 'ofertas') return hasPromo(card, 'oferta');
+    if(activeView === 'liquidacion') return hasPromo(card, 'liquidacion');
+    return brand === activeView;
+}
 
-    cards.forEach(card => {
-        const brand = (card.dataset.brand || '').toLowerCase().trim();
-        const cardText = card.dataset.search || normalizeText(card.innerText);
-        const matchesBrand = activeBrand === 'all' || brand === activeBrand;
-        const matchesText = !text || cardText.includes(text);
-        const show = matchesBrand && matchesText;
-
-        card.classList.toggle('hidden', !show);
-        card.style.display = show ? '' : 'none';
-        if(show) visible++;
+function setActiveButton(view){
+    viewButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.view === view);
     });
+}
 
-    if(counter){
-        counter.textContent = visible + ' productos visibles';
+function updateHeading(){
+    if(!viewTitle || !viewSubtitle) return;
+    if(activeView === 'all'){
+        viewTitle.textContent = 'TODOS LOS PRODUCTOS';
+        viewSubtitle.textContent = 'VIKTEC → EPONT → ROTAKE → FERRAWYY → FERTON → UYUSTOOLS · A–Z dentro de cada marca';
+    }else if(activeView === 'ofertas'){
+        viewTitle.textContent = 'OFERTAS';
+        viewSubtitle.textContent = 'Productos en oferta organizados por marca y alfabéticamente';
+    }else if(activeView === 'liquidacion'){
+        viewTitle.textContent = 'LIQUIDACIÓN';
+        viewSubtitle.textContent = 'Productos en liquidación organizados por marca y alfabéticamente';
+    }else{
+        viewTitle.textContent = BRAND_NAMES[activeView] || activeView.toUpperCase();
+        viewSubtitle.textContent = 'Productos ordenados alfabéticamente';
     }
 }
 
-function setActiveButton(brand){
-    buttons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.brand === brand);
-    });
+function removeGeneratedElements(){
+    document.querySelectorAll('#grid .brand-divider, #grid .empty-view-message').forEach(el => el.remove());
 }
 
-function openCatalog(brand){
-    activeBrand = (brand || 'all').toLowerCase().trim();
+function createDivider(brand, count){
+    const divider = document.createElement('div');
+    divider.className = 'brand-divider';
+    divider.dataset.brand = brand;
+    divider.innerHTML = `<strong>${BRAND_NAMES[brand] || brand.toUpperCase()}</strong><span>${count} producto${count === 1 ? '' : 's'}</span>`;
+    return divider;
+}
+
+function renderCatalog(){
+    if(!grid) return;
+    removeGeneratedElements();
+
+    const searchText = normalizeText(q ? q.value : '');
+
+    cards.forEach(card => {
+        card.classList.add('hidden');
+        card.style.display = 'none';
+    });
+
+    let visibleCards = cards.filter(card => {
+        const matchesView = matchesCurrentView(card);
+        const matchesText = !searchText || (card.dataset.search || '').includes(searchText);
+        return matchesView && matchesText;
+    });
+
+    visibleCards.sort((a,b) => {
+        if(activeView === 'all' || activeView === 'ofertas' || activeView === 'liquidacion'){
+            const bi = brandIndex(a) - brandIndex(b);
+            if(bi !== 0) return bi;
+        }
+        return productName(a).localeCompare(productName(b), 'es', {sensitivity:'base', numeric:true});
+    });
+
+    const groupedView = activeView === 'all' || activeView === 'ofertas' || activeView === 'liquidacion';
+
+    if(groupedView){
+        BRAND_ORDER.forEach(brand => {
+            const group = visibleCards.filter(card => (card.dataset.brand || '').toLowerCase() === brand);
+            if(!group.length) return;
+
+            grid.appendChild(createDivider(brand, group.length));
+            group.forEach(card => {
+                card.classList.remove('hidden');
+                card.style.display = '';
+                grid.appendChild(card);
+            });
+        });
+
+        const known = new Set(BRAND_ORDER);
+        const other = visibleCards.filter(card => !known.has((card.dataset.brand || '').toLowerCase()));
+        other.forEach(card => {
+            card.classList.remove('hidden');
+            card.style.display = '';
+            grid.appendChild(card);
+        });
+    }else{
+        visibleCards.forEach(card => {
+            card.classList.remove('hidden');
+            card.style.display = '';
+            grid.appendChild(card);
+        });
+    }
+
+    if(!visibleCards.length){
+        const empty = document.createElement('div');
+        empty.className = 'empty-view-message';
+        empty.textContent = searchText
+            ? 'No se encontraron productos que coincidan con la búsqueda.'
+            : 'No hay productos para mostrar en esta sección.';
+        grid.appendChild(empty);
+    }
+
+    if(counter){
+        counter.textContent = visibleCards.length + ' productos visibles';
+    }
+
+    updateHeading();
+}
+
+function openCatalog(view){
+    activeView = (view || 'all').toLowerCase().trim();
     if(landing) landing.classList.add('hidden-section');
     if(catalogSection) catalogSection.classList.remove('hidden-section');
-    setActiveButton(activeBrand);
     if(q) q.value = '';
-    applyFilters();
+    setActiveButton(activeView);
+    renderCatalog();
+
     setTimeout(() => {
-            const catalogSection = document.getElementById('catalog-section');
-            if (catalogSection) {
-                catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 80);
+        if(catalogSection){
+            catalogSection.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+    }, 80);
 }
 
-brandCards.forEach(card => card.addEventListener('click', () => openCatalog(card.dataset.openBrand)));
-buttons.forEach(btn => {
+brandCards.forEach(card => {
+    card.addEventListener('click', () => openCatalog(card.dataset.openBrand));
+});
+
+viewButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        activeBrand = (btn.dataset.brand || 'all').toLowerCase().trim();
-        setActiveButton(activeBrand);
-        applyFilters();
+        activeView = (btn.dataset.view || 'all').toLowerCase().trim();
+        setActiveButton(activeView);
+        renderCatalog();
     });
 });
 
@@ -8016,21 +8309,18 @@ if(backHome){
         if(catalogSection) catalogSection.classList.add('hidden-section');
         if(landing) landing.classList.remove('hidden-section');
         if(q) q.value = '';
-        activeBrand = 'all';
+        activeView = 'all';
         setActiveButton('all');
-        applyFilters();
-        setTimeout(() => {
-            const catalogSection = document.getElementById('catalog-section');
-            if (catalogSection) {
-                catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 80);
+        renderCatalog();
+        window.scrollTo({top:0, behavior:'smooth'});
     });
 }
 
-if(q) q.addEventListener('input', applyFilters);
-applyFilters();
-  </script>
+if(q) q.addEventListener('input', renderCatalog);
+
+setActiveButton('all');
+renderCatalog();
+</script>
 <div class="product-modal hidden" id="productModal">
 <div class="product-modal-backdrop" id="modalBackdrop"></div>
 <div class="product-modal-box">
@@ -8181,10 +8471,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+
 <script>
 (function(){
+  const brandOrder = {
+    epont: 1,
+    ferrawyy: 2,
+    ferton: 3,
+    rotake: 4,
+    uyustools: 5,
+    viktec: 6
+  };
+
+  function sortAllByBrandAndName(){
+    const grid = document.querySelector('#grid');
+    if(!grid) return;
+
+    const cards = Array.from(grid.querySelectorAll('.card[data-brand]'));
+    cards.sort((a,b) => {
+      const ba = (a.dataset.brand || '').toLowerCase();
+      const bb = (b.dataset.brand || '').toLowerCase();
+      const brandCmp = (brandOrder[ba] || 99) - (brandOrder[bb] || 99);
+      if(brandCmp !== 0) return brandCmp;
+
+      const na = (a.querySelector('h3')?.textContent || '').trim();
+      const nb = (b.querySelector('h3')?.textContent || '').trim();
+      return na.localeCompare(nb, 'es', {sensitivity:'base', numeric:true});
+    });
+
+    cards.forEach(card => grid.appendChild(card));
+  }
+
   function applyBrandFilter(brand){
     const cards = Array.from(document.querySelectorAll('#grid .card[data-brand]'));
+    if(brand === 'all') sortAllByBrandAndName();
+
     cards.forEach(card => {
       const matches = brand === 'all' || card.dataset.brand === brand;
       card.classList.toggle('hidden', !matches);
@@ -8210,11 +8531,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('DOMContentLoaded', function(){
     const active = document.querySelector('.brand-tabs button.active[data-brand]');
-    if(active){
-      applyBrandFilter(active.dataset.brand);
-    }
+    if(active) applyBrandFilter(active.dataset.brand);
   });
 })();
 </script>
+
 </body>
 </html>
