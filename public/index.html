@@ -4037,6 +4037,15 @@ html body #grid article.card .old-price {
  text-decoration-color:transparent!important;
 }
 html body #productModal #modalContent article.card .regular-amount{color:#687483!important;opacity:1!important}
+</style><style>
+.ml-nav-shell{display:flex;align-items:center;gap:5px;min-width:0;width:100%;margin-bottom:12px;box-sizing:border-box}
+.ml-nav-shell > .catalog-nav-tabs{flex:1 1 0%;min-width:0;width:0;max-width:100%;box-sizing:border-box;margin:0!important;display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;justify-content:flex-start!important;touch-action:pan-x pan-y;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ml-nav-shell > .catalog-nav-tabs > button{flex:0 0 auto!important;white-space:nowrap!important}
+.ml-nav-shell > .catalog-nav-tabs::-webkit-scrollbar{display:none}
+.ml-nav-shell > .ml-nav-arrow{flex:0 0 36px;width:36px;height:44px;padding:0;border:1px solid #dce4ed;border-radius:10px;background:#edf2f7;color:#315d88;display:grid;place-items:center;cursor:pointer;touch-action:manipulation}
+.ml-nav-shell > .ml-nav-arrow[hidden]{display:none!important}
+.ml-nav-shell > .ml-nav-arrow:disabled{opacity:.35;cursor:default}
+.ml-nav-shell > .ml-nav-arrow:focus-visible{outline:2px solid #315d88;outline-offset:2px}
 </style></head>
 <body>
 <header>
@@ -4177,7 +4186,7 @@ html body #productModal #modalContent article.card .regular-amount{color:#687483
 <button class="back-home" id="backHome">
      ← Volver a marcas
     </button>
-<div class="brand-tabs catalog-nav-tabs">
+<div class="ml-nav-shell"><button type="button" class="ml-nav-arrow" data-direction="-1" aria-label="Ver opciones anteriores" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="brand-tabs catalog-nav-tabs">
 <button class="active" data-view="all">TODAS</button>
 <button data-view="viktec">VIKTEC</button>
 <button data-view="epont">EPONT</button>
@@ -4188,7 +4197,7 @@ html body #productModal #modalContent article.card .regular-amount{color:#687483
 <button class="promo-tab ofertas-tab" data-view="ofertas">🏷️ OFERTAS</button>
 <button class="promo-tab liquidacion-tab" data-view="liquidacion">🔖 LIQUIDACIÓN</button>
 <button class="category-tab" data-view="categories">📂 CATEGORÍAS</button>
-</div>
+</div><button type="button" class="ml-nav-arrow" data-direction="1" aria-label="Ver más opciones" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div>
 <button aria-controls="categoryPanel" aria-expanded="true" class="category-toggle" hidden="" id="categoryToggle" type="button"><span class="category-toggle-label">Ocultar categorías</span><span aria-hidden="true" class="category-toggle-chevron">⌃</span></button>
 <div class="category-panel" hidden="" id="categoryPanel"></div>
 <input id="q" placeholder="Buscar por código, nombre, categoría o marca..."/>
@@ -10266,5 +10275,11 @@ html{overflow-x:clip;scroll-behavior:smooth}body{background:#fff!important;overf
 #productModal .product-modal-box article.card > .offer-price-box{margin-top:22px!important;align-self:stretch!important}
 #productModal .product-modal-box article.card > .specs{margin-bottom:0!important}
 </style>
-</body>
+<script>
+(function(){const shell=document.querySelector('.ml-nav-shell');const nav=shell.querySelector('.catalog-nav-tabs');const arrows=[...shell.querySelectorAll('.ml-nav-arrow')];
+function update(){if(!shell.clientWidth)return;const needed=nav.scrollWidth>shell.clientWidth+1;arrows.forEach(b=>b.hidden=!needed);arrows[0].disabled=nav.scrollLeft<=1;arrows[1].disabled=nav.scrollLeft+nav.clientWidth>=nav.scrollWidth-1;}
+arrows.forEach(b=>b.addEventListener('click',()=>nav.scrollBy({left:Number(b.dataset.direction)*Math.max(100,nav.clientWidth*.8),behavior:'smooth'})));
+nav.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);new ResizeObserver(update).observe(shell);new ResizeObserver(update).observe(nav);
+new MutationObserver(()=>{const active=nav.querySelector('.active');if(active&&nav.clientWidth){const a=active.getBoundingClientRect(),n=nav.getBoundingClientRect();if(a.left<n.left||a.right>n.right)nav.scrollLeft+=a.left-n.left-(nav.clientWidth-active.offsetWidth)/2;}update();}).observe(nav,{subtree:true,attributes:true,attributeFilter:['class']});update();})();
+</script></body>
 </html>
